@@ -12,8 +12,8 @@ title: python4me                          # the main title
 
 tagline:   # it will display as the sub-title
 
-description: >-                        # used by seo meta and the atom feed
-I'll host python  stuff here.
+description: I'll host python  stuff here.                        # used by seo meta and the atom feed
+
 # fill in the base hostname & protocol for your site, e.g., 'https://username.github.io'
 url: 'https://python4me.github.io'
 
