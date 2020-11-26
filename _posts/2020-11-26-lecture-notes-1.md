@@ -40,7 +40,6 @@ Almost all python classes--actually all programming classes--start with printing
 
 ```python
 >>> print('Hello World!')
-```
 Hello World!
 ```
 
