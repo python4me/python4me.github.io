@@ -584,7 +584,7 @@ This brings us to the end of branching and to the last subject I want to talk ab
 
 You already saw one of these: the `print()` *function*. You'll come across more and more functions as you delve deeper. Don't make an effort to memorize them all at once, they won't stick. For this reason, this section doesn't focus on different functions you can use for different things but rather how to make your own functions.
 
-Again, functions in python work just like the functions in math. They take a variable and return a value. Accordingly we use the `def` function to *define* functions. Think about a mathematical function we can write in python. How about $f(x)=x^2$? Let's see how it's done:
+Again, functions in python work just like the functions in math. They take a variable and return a value. Accordingly we use the `def` function to *define* functions. Think about a mathematical function we can write in python. How about \\(f(x)=x^2\\)? Let's see how it's done:
 
 ```python
 def f(x):
