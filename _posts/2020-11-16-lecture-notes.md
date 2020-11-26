@@ -2,7 +2,7 @@
 title: Lecture Notes 1
 date: 2020-11-26 02:31:00 +0300
 categories: [python, lecture]
-tags: [intro, python, lecture]     
+tags: [intro]     
 math: true
 ---
 
