@@ -7,7 +7,7 @@ tags: [lecture]
 math: true
 ---
 
-I'm hoping you all already installed python and sublime text (or an IDE of your choice) according to your operating system since I won't be wasting time on that. Actually I got no way to waste time on that since I got no windows and Linux comes with python pre-installed. 
+I'm hoping you all already installed python and sublime text (or an IDE of your choice) according to your operating system since I won't be wasting time on that. Actually I got no way to waste time on that since I got no windows and Linux comes with python pre-installed. Check [this](https://www.howtogeek.com/197947/how-to-install-python-on-windows/) if you haven't installed python and [this](https://www.how2shout.com/how-to/install-sublime-text-in-windows-for-python.html) for installing sublime text.
 
 # Opening the shell
 
