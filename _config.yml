@@ -19,7 +19,7 @@ url: 'https://python4me.github.io'
 
 author: Guess who                  # change to your full name
 
-avatar:    # support internet resources
+avatar: /assets/img/sample/avatar.jpg   # support internet resources
 
 github:
   username:              # change to your github username
@@ -75,7 +75,7 @@ disqus:
 #
 #     dark   - Use the dark color scheme
 #
-theme_mode: dark
+theme_mode: dual
 
 # boolean type, the global switch for ToC in posts.
 toc: true
