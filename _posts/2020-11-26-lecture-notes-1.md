@@ -68,7 +68,7 @@ Although please note that the print function is run by default in your shell. Th
 Hello World!
 ```
 
-## What objects?
+# What objects?
 
 I like to make this course more focused on the object-oriented part of python because although it may sound hard now, this will ease a lot of stuff. You might have found it odd that I've said python prints *objects* to the screen in the 'Hello World!' example. But it is in fact true. Every single 'thing' in python is an object. That `print()` function? Object. That `\n` character? Object. Hello world? Object. Now to avoid confusion and more so to make this language actually work, we need some objects to be different than others and this brings us to **object types**.
 
@@ -160,7 +160,7 @@ It isn't so
 It isn't so
 ```
 
-### Type conversions
+## Type conversions
 
 The last thing you should know about types is that you can convert them to each other. You can use the commands `int()`, `str()`, `list()`, `set()` for example, to do this. If we want to see it in action:
 
@@ -213,11 +213,11 @@ Here's a table of some data types and examples:
 | Sets            | set     | {'ikbal', 'kuzey'}, {1, 5, 'ikbal'}       |
 | Lists           | list    | [0, 1, 3, 4], ['ikbal', 'kuzey', 'ikbal'] |
 
-## Operators
+# Operators
 
 All these brings us to operators. Yes, I know, it's not as exiting to learn about data types and these basic stuff, but it'll be over soon. Operators are just like in math. They operate. I don't think high level explanations are very memorable so let's see some operators. Operators are *type-specific*, meaning that either they don't work for different types or that they work differently for different types. Don't try to memorize these. Try writing code that uses these operators. That'll make them stick more easily.
 
-### Integer and float operators
+## Integer and float operators
 
 Addition
 
@@ -274,7 +274,7 @@ Raise to the power
 
 **Note:** The same "order of operations" rules apply here too.
 
-### String operators
+## String operators
 
 Appension or glueing strings together
 
@@ -290,7 +290,7 @@ Repetition
 'ikbalikbalikbal'
 ```
 
-### List operators
+## List operators
 
 List comprehension is a wide subject and there are lots you can do with lists. They are probably the most important and useful type if we don't count booleans. But I'm not going to be focusing too much on that for this section since it won't be memorable. We'll have a section going in depth with lists soon. Some basic operations you should keep in mind are
 
@@ -321,7 +321,7 @@ Indexing
 3
 ```
 
-### Assignment operators
+## Assignment operators
 
 `=` You know this one.
 
@@ -338,7 +338,7 @@ Indexing
 
 `*=` and `-=` You should be able to guess.
 
-### Membership operators
+## Membership operators
 
 `in`
 
@@ -347,7 +347,7 @@ Indexing
 True
 ```
 
-### Identity operators
+## Identity operators
 
 `is`
 
@@ -357,7 +357,7 @@ True
 True
 ```
 
-### Comparison operators
+## Comparison operators
 
 `==`. Same with `is`. It checks whether objects on the ends are the same.
 
@@ -393,11 +393,11 @@ True
 False
 ```
 
-## Expressions
+# Expressions
 
 To be honest, all we were doing in the last section was checking the values of expressions. When you use objects with operators, you get expressions. For example `a = 5` is an expression just like `a is 5`. Some of these expressions are logical arguments. You may have noticed that in a big part of the operators we just saw, the shell returned either True or False. These expressions which return True or False are called logical statements just like in math. This brings us to **branching**.
 
-## Branching
+# Branching
 
 Branching despite it's impressive name only means checking for a condition and running (or not running) code based on that condition. The basic statements for branching is `if`, `elif` and `else`. Remember the comparison operators? This is where we'll use them.
 
@@ -443,7 +443,7 @@ It is also possible to run this from the terminal on Linux and from `cmd` on Win
 
 Enough Sublime Text, let's get back to how branching works.
 
-### What happened?
+## What happened?
 
 1. The interpreter, when parsing the file comes to the if statement and stops.
 2. The interpreter checks whether what comes after it is True. So in this case, the interpreter checks whether `True` is True.
@@ -510,7 +510,7 @@ Ikbal is ok.
 [Finished in 0.0s]
 ```
 
-### What happened?
+## What happened?
 
 1. The interpreter checked the first if statement. It was `False` because `ikbal` != `'pretty'`.
 2. The interpreter checked the `elif` statement and it was `True` because `ikbal` != `'ok'`.
@@ -522,7 +522,7 @@ So from this we can deduce:
 
 Let's test our deduction. We'll set `ikbal` to be `'ok'`. Before running try to guess what'll happen on your own. It's always a good exercise to guess before you run your code so you may have a clue where you go wrong.
 
-### Our guess
+## Our guess
 
 1. The interpreter will check `if` `ikbal` == `'pretty'` and it will return `False` because it isn't.
 2. The interpreter will check `elif` `ikbal` != `'ok'` and it will also return `False` because `ikbal` **is** `'ok'` and the statement returns `True` only when `ikbal` **isn't** `'ok'`.
@@ -550,7 +550,7 @@ So our guess was correct.
 
 The last thing about branching that you need to know is **nested branching**. As it's name it's about *nesting* different branches.
 
-### Nested branching
+## Nested branching
 
 Open a new file and name it whatever you want (It should end with `.py`). This one is so simple that you don't even need an example for it but here goes:
 
@@ -570,7 +570,7 @@ This number is divisible by 1
 [Finished in 0.0s]
 ```
 
-#### What happened?
+### What happened?
 
 1. The interpreter checked `if` the remainder from dividing `num` by 1 was 0. (So it checked whether `num` was divisible by 1) And 5 **is** divisible by 1 so it ran the indented code.
 2. It ran the `print()` function
@@ -580,7 +580,7 @@ Note that if the first `if` statement didn't run, the interpreter **wouldn't che
 
 This brings us to the end of branching and to the last subject I want to talk about in this lesson.
 
-## Functions
+# Functions
 
 You already saw one of these: the `print()` *function*. You'll come across more and more functions as you delve deeper. Don't make an effort to memorize them all at once, they won't stick. For this reason, this section doesn't focus on different functions you can use for different things but rather how to make your own functions.
 
@@ -701,9 +701,9 @@ Example:
 three thirty pm
 ```
 
-## Solutions
+# Solutions
 
-## Fixing Sublime for Linux
+# Fixing Sublime for Linux
 
 1. Go into `Tools > Build System > New Build System...`
 
