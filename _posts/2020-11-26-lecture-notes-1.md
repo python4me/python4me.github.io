@@ -13,7 +13,7 @@ I'm hoping you all already installed python and sublime text (or an IDE of your 
 
 Some of the stuff we'll do today do not need to be created as files to work and can be worked off just the shell. The shell is the place where you can enter commands without making files and they'll be run by python. To enter the python shell all of you on windows can just open open the IDLE application that is installed on your computer. For Linux you can just run `python3` in your terminal. You can exit this shell by running `exit()` on Linux. I'm not sure if that works for windows but you can always just close the window. 
 
-![](/assets/img/posts/python/1/python-interpreter-screen.png)
+![Nevermind the version in the picture](/assets/img/posts/python/1/python-interpreter-screen.png)
 
 # Difference between compiled and interpreted languages
 
