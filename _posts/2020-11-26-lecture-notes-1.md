@@ -125,21 +125,21 @@ Tuples are just like lists but the difference is that you can't change them. Aga
 <class 'bool'>
 ```
 
-Another type that we have are `boolean`. This is simple a True or False statement. We'll make use of this when we get to how to write logical *expressions*.
+Another type that we have is `boolean`. This is a simple True or False statement. We'll make use of this when we get to how to write logical *expressions*.
 
 ```python
 >>> type('')
 <class 'str'>
 ```
 
-The last type, at least for now is `string`. Strings are anything you put inside ' 's you can also use " "s but you should be consistent with which one you use. Most people think about *writing* when thinking about strings. Yes that is true, but only to an extend. I wouldn't like to confuse you but `'3'` is also a string. 
+The last type, at least for now is `string`. Strings are anything you put inside ' 's. You can also use " "s but you should be consistent with what you use. Most people think about *writing* when thinking about strings. Yes that is true, but only to an extend. I wouldn't like to confuse you but `'3'` is also a string. 
 
 ```python
 >>> type('3')
 <class 'str'>
 ```
 
-So just keep in mind that anything between quotes is a string although strings have text inside them mot of the time, they can have any character you want. (Except the escape character, i.e. `\`) 
+So just keep in mind that anything between quotes is a string although strings have text inside them most of the time, they can have any character you want. (Except the escape character on it's own, i.e. `\`) 
 
 This brings us to another thing you should note related to `print()`. The escape character: `\`. Backwards slash--unless it's used before certain characters like `n` and `t`--will disable the next character. What do I mean by this? Let's see:
 
@@ -200,22 +200,22 @@ So here we face a NameError. And it clearly tells us that python doesn't know wh
 awesome
 ```
 
-So by defining this meaningless text, we made it a **variable**. Our `ikbal` variable has the value "awesome." And we did it by using the `=` operator. You should note that there are **reserved words** that you can't use for variables because they already have a meaning. Altough, when you're using sublime, these words will be highlighted so you won't have any trouble. These words are: and, as, assert, break, class, continue, def, del, elif, else, except, False, finally, for, from, global, if, import, in, is, lambda, nonlocal, None, not, or, pass, raise, return, True, try, while,with,and yield.
+So by defining this meaningless text, we made it a **variable**. Our `ikbal` variable has the value `"awesome"`. And we did it by using the `=` operator. You should note that there are **reserved words** that you can't use for variables because they already have a meaning. Altough, when you're using sublime, these words will be highlighted so you won't have any trouble. These words are: `and`, `as`, `assert`, `break`, `class`, `continue`, `def`, `del`, `elif`, `else`, `except`, `False`, `finally`, `for`, `from`, `global`, `if`, `import`, `in`, `is`, `lambda`, `nonlocal`, `None`, `not`, `or`, `pass`, `raise`, `return`, `True`, `try`, `while`, `with`, `and`, `yield`.
 
 Here's a table of some data types and examples:
 
-| What is it?     | Name    | Examples                                  |
-| --------------- | ------- | ----------------------------------------- |
-| Text            | string  | 'ikbal', '12345', 'print()'               |
-| Whole numbers   | integer | 3, 4, 5, 345                              |
-| Decimal numbers | float   | 5.2, 6.8, 9.2E6                           |
-| True or False   | boolean | True, False                               |
-| Sets            | set     | {'ikbal', 'kuzey'}, {1, 5, 'ikbal'}       |
-| Lists           | list    | [0, 1, 3, 4], ['ikbal', 'kuzey', 'ikbal'] |
+| What is it?                                  | Name    | Examples                                  |
+| -------------------------------------------- | ------- | ----------------------------------------- |
+| Text (Anything inside '' actually)           | string  | 'ikbal', '12345', 'print()'               |
+| Whole numbers                                | integer | 3, 4, 5, 345                              |
+| Decimal numbers                              | float   | 5.2, 6.8, 9.2E6                           |
+| True or False                                | boolean | True, False                               |
+| Sets                                         | set     | {'ikbal', 'kuzey'}, {1, 5, 'ikbal'}       |
+| Lists                                        | list    | [0, 1, 3, 4], ['ikbal', 'kuzey', 'ikbal'] |
 
 # Operators
 
-All these brings us to operators. Yes, I know, it's not as exiting to learn about data types and these basic stuff, but it'll be over soon. Operators are just like in math. They operate. I don't think high level explanations are very memorable so let's see some operators. Operators are *type-specific*, meaning that either they don't work for different types or that they work differently for different types. Don't try to memorize these. Try writing code that uses these operators. That'll make them stick more easily.
+All these brings us to operators. Yes, I know, it's not as exciting to learn about data types and these basic stuff, but it'll be over soon. Operators are just like in math. They operate. I don't think high level explanations are very memorable so let's see some operators. Operators are *type-specific*, meaning that either they don't work for different types or that they work differently for different types. Don't try to memorize these. Try writing code that uses these operators. That'll make them stick more easily.
 
 ## Integer and float operators
 
@@ -374,9 +374,9 @@ True
 True
 ```
 
-There's also >, <, >=, <= but I'm sure you can guess what they do.
+There's also `>`, `<`, `>=`, `<=` but I'm sure you can guess what they do.
 
- ### Logical Operators
+## Logical Operators
 
 `and`, `or`
 
@@ -395,7 +395,7 @@ False
 
 # Expressions
 
-To be honest, all we were doing in the last section was checking the values of expressions. When you use objects with operators, you get expressions. For example `a = 5` is an expression just like `a is 5`. Some of these expressions are logical arguments. You may have noticed that in a big part of the operators we just saw, the shell returned either True or False. These expressions which return True or False are called logical statements just like in math. This brings us to **branching**.
+To be honest, all we were doing in the last section was checking the values of expressions. When you use objects with operators, you get expressions. For example `a = 5` is an expression just like `a is 5`. Some of these expressions are logical arguments. You may have noticed that in a big part of the operators we just saw, the shell returned either `True` or `False`. These expressions which return `True` or `False` are called logical statements just like in math. This brings us to **branching**.
 
 # Branching
 
