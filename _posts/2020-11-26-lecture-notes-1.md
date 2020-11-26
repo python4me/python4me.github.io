@@ -1,5 +1,5 @@
 ---
-title: Lecture Notes One
+title: Lecture Notes 1
 author: Guess Who
 date: 2020-11-26 13:36:00 +0300
 categories: [Python, Lectures]
@@ -698,6 +698,8 @@ Example:
 >>> print(time2words('15:30'))
 three thirty pm
 ```
+
+## Solutions
 
 ## Fixing Sublime for Linux
 
