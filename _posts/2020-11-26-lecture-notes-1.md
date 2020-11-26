@@ -9,31 +9,32 @@ math: true
 
 I'm hoping you all already installed python and sublime text (or an IDE of your choice) according to your operating system since I won't be wasting time on that. Actually I got no way to waste time on that since I got no windows and Linux comes with python pre-installed. 
 
-## Opening the shell
+# Opening the shell
 
 Some of the stuff we'll do today do not need to be created as files to work and can be worked off just the shell. The shell is the place where you can enter commands without making files and they'll be run by python. To enter the python shell all of you on windows can just open open the IDLE application that is installed on your computer. For Linux you can just run `python3` in your terminal. You can exit this shell by running `exit()` on Linux. I'm not sure if that works for windows but you can always just close the window. 
 
 ![](/assets/img/posts/python/1/python-interpreter-screen.png)
 
-## Difference between compiled and interpreted languages
+# Difference between compiled and interpreted languages
 
 I want to first talk about how this all works in general before we start to code anything. The major difference between programming languages is whether the code is compiled beforehand or simultaneously while running. Some coding languages like C++ and C# need to translate (compile) the code beforehand and create a separate file (in assembly language) that the interpreter (the program that will run your your code) can understand. These languages are called *compiled languages*. And other languages like python compile and interpret simultaneously. These languages are called *interpreted languages*. The downside of using the python way is that the code won't be as  *theoretically* efficient. But this difference in efficiency fades when we realize that humans can't even write code that is efficient enough to make a difference. So for you it won't make a difference for a long time. And when it does start to make a difference, there are ways to compile the python code you have before running using modules like Cython. The upside of interpreted languages is that the syntax of interpreted languages are easier to  understand.
 
 For compiled languages:
 
-```mermaid
+<div class="mermaid">
 graph LR
 B(Code) --> C(Compiler) --> D(Interpreter)
-```
+</div>
 
 For interpreted languages:
 
-```mermaid
+<div class="mermaid">
 graph LR
 B(Code) --> D(Interpreter)
-```
+</div>
 
-## Hello World
+
+# Hello World
 
 Almost all python classes--actually all programming classes--start with printing "Hello world" to the screen so I want also to get that out of the way. 
 
@@ -400,7 +401,7 @@ To be honest, all we were doing in the last section was checking the values of e
 
 Branching despite it's impressive name only means checking for a condition and running (or not running) code based on that condition. The basic statements for branching is `if`, `elif` and `else`. Remember the comparison operators? This is where we'll use them.
 
-```mermaid
+<div class="mermaid">
 graph LR
 B(code)
     B --> C{if}
@@ -409,7 +410,8 @@ B(code)
     E --> |True| G[Result 2]
     E --> |False| H{else}
     H --> I[Result 3]
-```
+</div>
+
 
 With branching, it'll be harder to use the shell so we'll now move on to using Sublime Text for the first time.
 
