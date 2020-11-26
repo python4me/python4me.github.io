@@ -1,5 +1,5 @@
 ---
-title: Lecture Notes 1
+title: Lecture Notes One
 author: Guess Who
 date: 2020-11-26 13:36:00 +0300
 categories: [Python, Lectures]
@@ -13,7 +13,7 @@ I'm hoping you all already installed python and sublime text (or an IDE of your 
 
 Some of the stuff we'll do today do not need to be created as files to work and can be worked off just the shell. The shell is the place where you can enter commands without making files and they'll be run by python. To enter the python shell all of you on windows can just open open the IDLE application that is installed on your computer. For Linux you can just run `python3` in your terminal. You can exit this shell by running `exit()` on Linux. I'm not sure if that works for windows but you can always just close the window. 
 
-![](/assets/img/posts/python/1/python interpreter screen.png)
+![](/assets/img/posts/python/1/python-interpreter-screen.png)
 
 ## Difference between compiled and interpreted languages
 
@@ -413,7 +413,7 @@ B(code)
 
 With branching, it'll be harder to use the shell so we'll now move on to using Sublime Text for the first time.
 
-![](/assets/img/posts/python/1/sublime-text screen.png)
+![](/assets/img/posts/python/1/sublime-text-screen.png)
 
 Go ahead and press `Ctrl + s`, pick a folder and name your file. Make sure your file has a `.py` extension. Alright, now we're ready to write some code. For the first example, let's test how `if` works. 
 
@@ -426,7 +426,7 @@ if True:
 
 To run a file with Sublime Text, press `Ctrl + B`. 
 
-![](/assets/img/posts/python/1/build system selection.png)
+![](/assets/img/posts/python/1/build-system-selection.png)
 
 Then click the Python option.
 
