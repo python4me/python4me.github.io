@@ -19,7 +19,7 @@ url: 'https://python4me.github.io'
 
 author: Guess who                  # change to your full name
 
-avatar: /assets/img/sample/avatar.jpg   # support internet resources
+avatar:    # support internet resources
 
 github:
   username:              # change to your github username
