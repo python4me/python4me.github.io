@@ -1,7 +1,7 @@
 ---
 title: Homework 1
 author: Guess Who
-date: 2020-11-26 13:36:00 +0300
+date: 2020-11-26 14:36:00 +0300
 categories: [Python, Lectures, Homework]
 tags: [homework]
 math: false
