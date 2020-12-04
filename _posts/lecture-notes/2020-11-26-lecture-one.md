@@ -668,7 +668,7 @@ yank
 
 So in essence, if you tell a function to print, don't print the function. If you tell it to `return` something, print it.
 
-# [Homework]({% post_url /homework/2020-11-26-one %})
+# [Homework]({% post_url /homework/2020-11-26-homework-one %})
 
 # Fixing Sublime for Linux
 

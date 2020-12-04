@@ -7,7 +7,7 @@ tags: [homework]
 math: false
 ---
 
-You should be able to do the easy part with your current knowledge while advanced will need you to do some research on your own (It's related to next week's subject). Answers to both of these questions will be available at [solutions]({% post_url /homework-solutions/2020-11-26-one %}) 24 hours before the next lecture.
+You should be able to do the easy part with your current knowledge while advanced will need you to do some research on your own (It's related to next week's subject). Answers to both of these questions will be available at [solutions]({% post_url /homework-solutions/2020-11-26-homework-solution-one %}) 24 hours before the next lecture.
 
 ## Easy
 
