@@ -1,5 +1,5 @@
 ---
-title: Homework 1
+title: Homework 2
 author: Guess Who
 date: 2020-12-12 14:36:00 +0300
 categories: [Python, Lectures, Homework]
