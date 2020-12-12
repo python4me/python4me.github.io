@@ -235,7 +235,7 @@ Output:
 
 ### The smarter way
 
-We know that $\sqrt[n]{x}=x^{1/n}$ so that's what we'll use. (You can also use $\sqrt[n]{x}=x^{n^{-1}}$ if you want to)
+We know that \\(\sqrt[n]{x}=x^{1/n}\\) so that's what we'll use. (You can also use \\(\sqrt[n]{x}=x^{n^{-1}}\\) if you want to)
 
 Define our function.
 
