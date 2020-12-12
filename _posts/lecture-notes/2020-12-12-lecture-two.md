@@ -1,7 +1,7 @@
 ---
 title: Lecture Notes 2
 author: Guess Who
-date: 2020-11-12 13:36:00 +0300
+date: 2020-12-12 13:36:00 +0300
 categories: [Python, Lectures, Notes]
 tags: [lecture]
 math: true
@@ -694,3 +694,4 @@ This part is to introduce you to the `len()` (length) function. It simply gives 
 >>> len('string')
 6
 ```
+# [Homework]({% post_url /homework/2020-12-12-homework-two %})

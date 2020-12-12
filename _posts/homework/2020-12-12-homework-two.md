@@ -7,6 +7,8 @@ tags: [homework]
 math: false
 ---
 
+Answers to all of these questions will be available at [solutions]({% post_url /homework-solutions/2020-12-12-homework-solution-two %}) 24 hours before the next lecture.
+
 # 1
 
 Notice anything peculiar about "ikbal" and "kbali?" When we take the first letter of ikbal and snap it to the end, we get kbali. We can continue this and get balik, alikb, likba and finally return to ikbal. Let's call such words rotations of each other. Write a function that takes two strings and checks whether these strings are rotations of each other. For example
