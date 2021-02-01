@@ -396,61 +396,61 @@ Speaking of tying loose ends, we need to come back to lists (_again, I know, but
 
 1. **Inserting:** Adding an item to a list at a specific location.
 
-```python
->>> lis.insert(1, 'inserted')
->>> lis
-[0, 'inserted', 1, 2, 3, 4]
-```
+	```python
+	>>> lis.insert(1, 'inserted')
+	>>> lis
+	[0, 'inserted', 1, 2, 3, 4]
+	```
 
 2. **Count:** How many times an object appears in a list.
 
-```python
->>> lis.count(1)
-1
-```
+	```python
+	>>> lis.count(1)
+	1
+	```
 
 3. **Append:** Adds an item to the end of the list.
 
-```python
->>> lis.append('appended')
->>> lis
-[0, 'inserted', 1, 2, 3, 4, 'appended']
-```
+	```python
+	>>> lis.append('appended')
+	>>> lis
+	[0, 'inserted', 1, 2, 3, 4, 'appended']
+	```
 
 4. **Extend:** Adds a list to the end of another list.
 
-```python
->>> lis2 = ['extended1', 'extended2', 'extended3']
->>> lis.extend(lis2)
->>> lis
-[0, 'inserted', 1, 2, 3, 4, 'appended', 'extended1', 'extended2', 'extended3']
-```
+	```python
+	>>> lis2 = ['extended1', 'extended2', 'extended3']
+	>>> lis.extend(lis2)
+	>>> lis
+	[0, 'inserted', 1, 2, 3, 4, 'appended', 'extended1', 'extended2', 'extended3']
+	```
 
 5. **Pop:** Removes an element at an index, and also returns that element. ()
 
-```python
->>> lis.pop(0)
-0
->>> lis
-['inserted', 1, 2, 3, 4, 'appended', 'extended1', 'extended2']
-```
+	```python
+	>>> lis.pop(0)
+	0
+	>>> lis
+	['inserted', 1, 2, 3, 4, 'appended', 'extended1', 'extended2']
+	```
 
-This will remove the last element if we use it without an attribute.
+	This will remove the last element if we use it without an attribute.
 
-```python
->>> lis.pop()
-'extended3'
->>> lis
-[0, 'inserted', 1, 2, 3, 4, 'appended', 'extended1', 'extended2']
-```
+	```python
+	>>> lis.pop()
+	'extended3'
+	>>> lis
+	[0, 'inserted', 1, 2, 3, 4, 'appended', 'extended1', 'extended2']
+	```
 
 6. **Reverse:** Reverses a list.
 
-```python
->>> lis.reverse()
->>> lis
-['extended2', 'extended1', 'appended', 4, 3, 2, 1, 'inserted']
-```
+	```python
+	>>> lis.reverse()
+	>>> lis
+	['extended2', 'extended1', 'appended', 4, 3, 2, 1, 'inserted']
+	```
 
 7. **Sorting:** Sorts a list.
 
