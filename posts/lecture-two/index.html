@@ -1,0 +1,391 @@
+<!DOCTYPE html><html lang="en" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="theme" content="Chirpy v2.5.1"><meta name="generator" content="Jekyll v4.2.0" /><meta property="og:title" content="Lecture Notes 2" /><meta name="author" content="Guess Who" /><meta property="og:locale" content="en_US" /><meta name="description" content="I have said we’d go into lists et al. in a later lecture and here we are. Iteration as its name is about iterating. You have an object with multiple (or just one) elements and you cycle over them (or it). And in the last lecture I have mentioned to you that while some objects could be turned into others, some may not. This was–in essence–about whether an object was iterable or not. Lists and sets both have elements and they can be translated into one another. So can tuples. But though this rule doesn’t always work (see: list to string translation is not that easy) but it’s a really good starting point. The iterable object types are: list; tuple;str and a new one for you, dict." /><meta property="og:description" content="I have said we’d go into lists et al. in a later lecture and here we are. Iteration as its name is about iterating. You have an object with multiple (or just one) elements and you cycle over them (or it). And in the last lecture I have mentioned to you that while some objects could be turned into others, some may not. This was–in essence–about whether an object was iterable or not. Lists and sets both have elements and they can be translated into one another. So can tuples. But though this rule doesn’t always work (see: list to string translation is not that easy) but it’s a really good starting point. The iterable object types are: list; tuple;str and a new one for you, dict." /><link rel="canonical" href="https://python4me.github.io/posts/lecture-two/" /><meta property="og:url" content="https://python4me.github.io/posts/lecture-two/" /><meta property="og:site_name" content="python4me" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2020-12-12T13:36:00+03:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="Lecture Notes 2" /><meta name="twitter:site" content="@" /><meta name="twitter:creator" content="@Guess Who" /> <script type="application/ld+json"> {"description":"I have said we’d go into lists et al. in a later lecture and here we are. Iteration as its name is about iterating. You have an object with multiple (or just one) elements and you cycle over them (or it). And in the last lecture I have mentioned to you that while some objects could be turned into others, some may not. This was–in essence–about whether an object was iterable or not. Lists and sets both have elements and they can be translated into one another. So can tuples. But though this rule doesn’t always work (see: list to string translation is not that easy) but it’s a really good starting point. The iterable object types are: list; tuple;str and a new one for you, dict.","author":{"@type":"Person","name":"Guess Who"},"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://python4me.github.io/posts/lecture-two/"},"url":"https://python4me.github.io/posts/lecture-two/","headline":"Lecture Notes 2","dateModified":"2020-12-12T13:36:00+03:00","datePublished":"2020-12-12T13:36:00+03:00","@context":"https://schema.org"}</script><title>Lecture Notes 2 | python4me</title><link rel="shortcut icon" href="/assets/img/favicons/favicon.ico" type="image/x-icon"><link rel="icon" href="/assets/img/favicons/favicon.ico" type="image/x-icon"><link rel="apple-touch-icon" href="/assets/img/favicons/apple-icon.png"><link rel="apple-touch-icon" href="/assets/img/favicons/apple-icon-precomposed.png"><link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicons/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicons/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicons/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicons/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicons/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicons/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicons/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicons/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicons/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/assets/img/favicons/manifest.json"><meta name='msapplication-config' content='/assets/img/favicons/browserconfig.xml'><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="/assets/img/favicons/ms-icon-144x144.png"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="preconnect" href="cdn.jsdelivr.net"><link rel="dns-prefetch" href="cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"><link rel="preload" as="style" href="/assets/css/post.css"><link rel="stylesheet" href="/assets/css/post.css"><link rel="preload" as="style" href="/assets/css/lib/bootstrap-toc.min.css"><link rel="stylesheet" href="/assets/css/lib/bootstrap-toc.min.css" /> <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script> <script async src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.15.0,npm/bootstrap@4/dist/js/bootstrap.min.js"></script> <script async src="/assets/js/post.min.js"></script> <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> <script defer src="/app.js"></script><body data-spy="scroll" data-target="#toc"><div id="sidebar" class="d-flex flex-column"><div id="nav-wrapper"><div id="profile-wrapper" class="d-flex flex-column"><div id="avatar" class="d-flex justify-content-center"> <a href="/" alt="avatar"> <img src="/assets/img/sample/avatar.png" alt="avatar" onerror="this.style.display='none'"> </a></div><div class="profile-text mt-3"><div class="site-title"> <a href="/">python4me</a></div><div class="site-subtitle font-italic"></div></div></div><ul class="nav flex-column"><li class="nav-item d-flex justify-content-center "> <a href="/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>HOME</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/about/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-info ml-xl-3 mr-xl-3 unloaded"></i> <span>ABOUT</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/archives/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>ARCHIVES</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/categories/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>CATEGORIES</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/tags/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-tags ml-xl-3 mr-xl-3 unloaded"></i> <span>TAGS</span> </a></ul></div><div class="sidebar-bottom d-flex flex-wrap justify-content-around mt-4"> <span id="mode-toggle-wrapper"> <i class="mode-toggle fas fa-sun" dark-mode-invisible></i> <i class="mode-toggle fas fa-moon" light-mode-invisible></i> <script type="text/javascript"> class ModeToggle { static get MODE_KEY() { return "mode"; } static get DARK_MODE() { return "dark"; } static get LIGHT_MODE() { return "light"; } constructor() { if (this.mode != null) { if (this.mode == ModeToggle.DARK_MODE) { if (!this.isSysDarkPrefer) { this.setDark(); } } else { if (this.isSysDarkPrefer) { this.setLight(); } } } var self = this; /* always follow the system prefers */ this.sysDarkPrefers.addListener(function() { if (self.mode != null) { if (self.mode == ModeToggle.DARK_MODE) { if (!self.isSysDarkPrefer) { self.setDark(); } } else { if (self.isSysDarkPrefer) { self.setLight(); } } self.clearMode(); } }); } /* constructor() */ setDark() { $('html').attr(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); } setLight() { $('html').attr(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); } clearMode() { $('html').removeAttr(ModeToggle.MODE_KEY); sessionStorage.removeItem(ModeToggle.MODE_KEY); } get sysDarkPrefers() { return window.matchMedia("(prefers-color-scheme: dark)"); } get isSysDarkPrefer() { return this.sysDarkPrefers.matches; } get isDarkMode() { return this.mode == ModeToggle.DARK_MODE; } get isLightMode() { return this.mode == ModeToggle.LIGHT_MODE; } get hasMode() { return this.mode != null; } get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); } flipMode() { if (this.hasMode) { if (this.isSysDarkPrefer) { if (this.isLightMode) { this.clearMode(); } else { this.setLight(); } } else { if (this.isDarkMode) { this.clearMode(); } else { this.setDark(); } } } else { if (this.isSysDarkPrefer) { this.setLight(); } else { this.setDark(); } } } /* flipMode() */ } /* ModeToggle */ let toggle = new ModeToggle(); $(".mode-toggle").click(function() { toggle.flipMode(); }); </script> </span> <span class="icon-border"></span></div></div><div id="topbar-wrapper" class="row justify-content-center topbar-down"><div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between"> <span id="breadcrumb"> <span> <a href="/"> Posts </a> </span> <span>Lecture Notes 2</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> Post</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" placeholder="Search..."> <i class="fa fa-times-circle fa-fw" id="search-cleaner"></i> </span> <span id="search-cancel" >Cancel</span></div></div><div id="main-wrapper"><div id="main"> <script src="https://combinatronics.com/python4me/python4me.github.io/master/assets/js/mermaid.min.js"></script><div class="row"><div id="post-wrapper" class="col-12 col-lg-11 col-xl-8"><div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><h1 data-toc-skip>Lecture Notes 2</h1><div class="post-meta text-muted d-flex flex-column"><div> Posted <span class="timeago " data-toggle="tooltip" data-placement="bottom" title="Sat, Dec 12, 2020, 1:36 PM +0300" > Dec 12, 2020 <i class="unloaded">2020-12-12T13:36:00+03:00</i> </span> by <span class="author"> Guess Who </span></div><div> Updated <span class="timeago lastmod" data-toggle="tooltip" data-placement="bottom" title="Sat, Dec 12, 2020, 7:39 PM +0300" > Dec 12, 2020 <i class="unloaded">2020-12-12T19:39:25+03:00</i> </span></div></div><div class="post-content"><p>I have said we’d go into lists et al. in a later lecture and here we are. <strong>Iteration</strong> as its name is about <em>iterating</em>. You have an object with multiple (or just one) elements and you cycle over them (or it). And in the last lecture I have mentioned to you that while some objects could be turned into others, some may not. This was–in essence–about whether an object was iterable or not. Lists and sets both have elements and they can be translated into one another. So can tuples. But though this rule doesn’t always work (see: list to string translation is not that easy) but it’s a really good starting point. The iterable object types are: <code class="language-plaintext highlighter-rouge">list</code>; <code class="language-plaintext highlighter-rouge">tuple</code>;<code class="language-plaintext highlighter-rouge">str</code> and a new one for you, <code class="language-plaintext highlighter-rouge">dict</code>.</p><h1 id="the-while-loop">The <code class="language-plaintext highlighter-rouge">while</code> Loop</h1><p>So far the names of the “stuff” we saw in python were all in accordance with the job of that “stuff.” And while is no different. <code class="language-plaintext highlighter-rouge">while</code> runs the indented code while a statement is <code class="language-plaintext highlighter-rouge">True</code>. Let me show you with an example:</p><h2 id="example-1">Example 1</h2><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'ikbal'</span><span class="p">)</span>
+</pre></table></code></div></div><p>this will give us</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+</pre><td class="rouge-code"><pre>ikbal
+ikbal
+ikbal
+ikbal
+ikbal
+ikbal
+ikbal
+ikbal
+ikbal
+ikbal
+ikbal
+ikbal
+ikbal
+ikbal
+ikbal
+ikbal
+ikbal
+ikbal
+ikbal
+ikbal
+ikbal
+ikbal
+...
+</pre></table></code></div></div><p>and will not stop ever.</p><h3 id="how-it-works">How it works</h3><ol><li>The interpreter comes to the <code class="language-plaintext highlighter-rouge">while</code> statement.<li>The interpreter checks whether the statement after <code class="language-plaintext highlighter-rouge">while</code> is true, that is, it checks whether <code class="language-plaintext highlighter-rouge">True</code> is <code class="language-plaintext highlighter-rouge">True</code>.<li><code class="language-plaintext highlighter-rouge">True</code> <strong>is</strong> true so the interpreter runs the indented part.<li>After running the indented part once, the interpreter checks again whether the statement is true and it still is so it runs the code again<li>The interpreter continues to “check and run” until the statement becomes <code class="language-plaintext highlighter-rouge">False</code> so in this case, forever. Since <code class="language-plaintext highlighter-rouge">True</code> will never become <code class="language-plaintext highlighter-rouge">False</code>.</ol><p>Let’s see another, more extensive example:</p><h2 id="example-2">Example 2</h2><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></table></code></div></div><p>Output:</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre><td class="rouge-code"><pre><span class="mi">4</span>
+<span class="mi">5</span>
+<span class="mi">6</span>
+<span class="mi">7</span>
+<span class="mi">8</span>
+<span class="mi">9</span>
+<span class="mi">10</span>
+</pre></table></code></div></div><h3 id="how-it-works-1">How it works</h3><ol><li>The interpreter comes to the <code class="language-plaintext highlighter-rouge">while</code> statement.<li>The interpreter checks whether <code class="language-plaintext highlighter-rouge">x &lt; 10</code> is <code class="language-plaintext highlighter-rouge">True</code>.<li>We defined <code class="language-plaintext highlighter-rouge">x</code> to be 3 so the statement is True and the interpreter will run the indented code.<li>The interpreter increases the value of x by 1 and prints the increased value.<li>After running the indented part, the interpreter checks whether the statement is still <code class="language-plaintext highlighter-rouge">True</code>. <code class="language-plaintext highlighter-rouge">x == 4</code> and <code class="language-plaintext highlighter-rouge">x &lt; 10</code>, so it will run the indented part.<li>This “check-run” process will continue until <code class="language-plaintext highlighter-rouge">x == 10</code>. When <code class="language-plaintext highlighter-rouge">x</code>’s value is 10, the statement will return <code class="language-plaintext highlighter-rouge">False</code> and the interpreter won’t run the indented part.</ol><h1 id="the-for-loop">The <code class="language-plaintext highlighter-rouge">for</code> Loop</h1><p>The syntax for <code class="language-plaintext highlighter-rouge">for</code> loops is the same with <code class="language-plaintext highlighter-rouge">while</code>. We use these loops when we want to do something with variables in sequences. The syntax is</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">do</span> <span class="n">something</span><span class="o">&gt;</span>
+</pre></table></code></div></div><p>As you see, this is very human-readable. For each element in our iterable, we’re telling the interpreter to “do something.”</p><h2 id="example-1-1">Example 1</h2><p>Let’s try this with a simple list.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></table></code></div></div><p>One thing you should note here is <code class="language-plaintext highlighter-rouge">x</code>. This is just an arbitrary variable we have named. This means for each loop, the element in our list will be assigned to <code class="language-plaintext highlighter-rouge">x</code>. To put it in perspective</p><div class="table-wrapper"><table><thead><tr><th>Loop<th>Value of x<tbody><tr><td>1st<td>0<tr><td>2nd<td>1<tr><td>3rd<td>2</table></div><p>And now we can run it:</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre><span class="mi">0</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+</pre></table></code></div></div><h3 id="what-happened">What happened?</h3><ol><li>The first element in our list, <code class="language-plaintext highlighter-rouge">0</code>, gets assigned to <code class="language-plaintext highlighter-rouge">x</code><li>The interpreter prints <code class="language-plaintext highlighter-rouge">x</code> which is no <code class="language-plaintext highlighter-rouge">0</code><li>The second element in our list, <code class="language-plaintext highlighter-rouge">1</code>, gets assigned to <code class="language-plaintext highlighter-rouge">x</code>.<li><code class="language-plaintext highlighter-rouge">x</code>, which is now <code class="language-plaintext highlighter-rouge">1</code>, gets printed.<li>The last element in our list, <code class="language-plaintext highlighter-rouge">2</code>, gets assigned to <code class="language-plaintext highlighter-rouge">x</code>.<li><code class="language-plaintext highlighter-rouge">x</code>, which is now <code class="language-plaintext highlighter-rouge">2</code>, gets printed.<li>There are no elements left in our list, so the <code class="language-plaintext highlighter-rouge">for</code> loop terminates.</ol><h2 id="example-2-1">Example 2</h2><p>Let’s make a for loop with strings now.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s">"ikbal"</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">letter</span><span class="p">))</span>
+</pre></table></code></div></div><p><code class="language-plaintext highlighter-rouge">ord()</code>: Given a string representing one Unicode character, return an integer representing the Unicode code point of that character. For example, <code class="language-plaintext highlighter-rouge">ord('a')</code> returns the integer 97 and <code class="language-plaintext highlighter-rouge">ord(€)</code> returns 8364. This is the inverse of <code class="language-plaintext highlighter-rouge">chr()</code>. Here’s an <code class="language-plaintext highlighter-rouge">ascii</code> table:</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/ASCII-Table-wide.svg/875px-ASCII-Table-wide.svg.png" alt="" /></p><p>Again, notice how our variable is now <code class="language-plaintext highlighter-rouge">letter</code>. In any case, you can name it whatever you want, but try to use understandable variables as much as you can.</p><p>Output:</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre><span class="mi">105</span>
+<span class="mi">107</span>
+<span class="mi">98</span>
+<span class="mi">97</span>
+<span class="mi">108</span>
+</pre></table></code></div></div><h3 id="what-happened-1">What happened?</h3><ol><li>The first letter of <code class="language-plaintext highlighter-rouge">'ikbal'</code> (<code class="language-plaintext highlighter-rouge">'i'</code>) gets assigned to the <code class="language-plaintext highlighter-rouge">letter</code> variable.<li>The <code class="language-plaintext highlighter-rouge">ascii</code> code of <code class="language-plaintext highlighter-rouge">'i'</code> is printed.<li>Repeat step 1 and 2 for the second, third, forth and fifth letter.<li>The loop terminates since there are no letters left.</ol><h2 id="example-3">Example 3</h2><p>Let’s try to make something useful this time: a function that will take two inputs <code class="language-plaintext highlighter-rouge">n</code> and <code class="language-plaintext highlighter-rouge">num</code> and return the positive nth root of <code class="language-plaintext highlighter-rouge">num</code>. Let’s also limit <code class="language-plaintext highlighter-rouge">num</code> to only be positive and of the form <code class="language-plaintext highlighter-rouge">answer**n</code>. For example if <code class="language-plaintext highlighter-rouge">n == 2</code> then <code class="language-plaintext highlighter-rouge">num</code> is a perfect square.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">nth_root</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">num</span><span class="p">):</span>
+    <span class="p">...</span>
+    <span class="p">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">nth_root</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">nth_root</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">nth_root</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">27</span><span class="p">)</span>
+<span class="mi">3</span>
+</pre></table></code></div></div><p>The method will use here is called <strong>exhaustive enumeration</strong>. It’s basically trial and error. The process is as follows:</p><ol><li>Make an <code class="language-plaintext highlighter-rouge">answer</code> variable and give it the initial value of <code class="language-plaintext highlighter-rouge">1</code>.<li>Take our <code class="language-plaintext highlighter-rouge">answer</code> to the nth power and check if it is equal to our <code class="language-plaintext highlighter-rouge">num</code>.<li>If it isn’t, increase the value of our <code class="language-plaintext highlighter-rouge">answer</code> and repeat the second step until we get our answer.</ol><p>You can try to implement this on your own before checking the answer.</p><p>Starting with the definition line:</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">nth_root</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">num</span><span class="p">):</span>
+</pre></table></code></div></div><p>We indent and define our <code class="language-plaintext highlighter-rouge">answer</code> variable. Since our <code class="language-plaintext highlighter-rouge">num</code> is limited to positive perfect nth powers and <code class="language-plaintext highlighter-rouge">answer</code> has to be positive, <code class="language-plaintext highlighter-rouge">1</code> is a good value to start with.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>    <span class="n">answer</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></table></code></div></div><p>We now need to make a loop which will increase our <code class="language-plaintext highlighter-rouge">answer</code> if <code class="language-plaintext highlighter-rouge">answer**n != num</code> (if the nth power of our current <code class="language-plaintext highlighter-rouge">answer</code> is not equal to <code class="language-plaintext highlighter-rouge">num</code>).</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre>    <span class="k">while</span> <span class="n">answer</span><span class="o">**</span><span class="n">n</span> <span class="o">!=</span> <span class="n">num</span><span class="p">:</span>
+        <span class="n">answer</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></table></code></div></div><p>After this loop completes, <code class="language-plaintext highlighter-rouge">answer</code> variable will be equal to the actual nth root of <code class="language-plaintext highlighter-rouge">num</code>. So we can just return it now.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>    <span class="k">return</span> <span class="n">answer</span>
+</pre></table></code></div></div><p>Let’s test our function a bit.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre><span class="k">print</span><span class="p">(</span><span class="n">nth_root</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">27</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">nth_root</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">nth_root</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">9765625</span><span class="p">))</span>
+</pre></table></code></div></div><p>Output:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre>3
+2
+5
+</pre></table></code></div></div><h3 id="the-smarter-way">The smarter way</h3><p>We know that \(\sqrt[n]{x}=x^{1/n}\) so that’s what we’ll use. (You can also use \(\sqrt[n]{x}=x^{n^{-1}}\) if you want to)</p><p>Define our function.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">smartroot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">num</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">num</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
+</pre></table></code></div></div><p>Testing lines:</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre><span class="k">print</span><span class="p">(</span><span class="n">smartroot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">27</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">smartroot</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">smartroot</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">9765625</span><span class="p">))</span>
+</pre></table></code></div></div><p>Output:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre>3.0
+2.0
+5.000000000000001
+</pre></table></code></div></div><p>Oh! What’s going on? This folks, is why we don’t mess with <code class="language-plaintext highlighter-rouge">float</code>s. Please check <a href="https://floating-point-gui.de/">What Every Programmer Should Know About Floating-Point Arithmetic</a> and especially <a href="https://floating-point-gui.de/basic/">this</a> page. Done? No? Alright here’s a quote from the page:</p><blockquote><h4 id="basic-answers">Basic Answers</h4><p>Why don’t my numbers, like 0.1 + 0.2 add up to a nice round 0.3, and instead I get a weird result like 0.30000000000000004?</p><p>Because internally, computers use a format (binary floating-point) that cannot accurately represent a number like 0.1, 0.2 or 0.3 at all.</p><p>When the code is compiled or interpreted, your “0.1” is already rounded to the nearest number in that format, which results in a small rounding error even before the calculation happens.</p><h4 id="why-do-computers-use-such-a-stupid-system">Why do computers use such a stupid system?</h4><p>It’s not stupid, just different. Decimal numbers cannot accurately represent a number like 1/3, so you have to round to something like 0.33 - and you don’t expect 0.33 + 0.33 + 0.33 to add up to 1, either - do you?</p><p>Computers use binary numbers because they’re faster at dealing with those, and because for most calculations, a tiny error in the 17th decimal place doesn’t matter at all since the numbers you work with aren’t round (or that precise) anyway.</p></blockquote><p>And here’s a relevant comic:</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="https://imgs.xkcd.com/comics/e_to_the_pi_minus_pi.png" alt="" /></p><h2 id="example-4">Example 4</h2><p>The whole point of this example is to have an excuse to introduce you to the <code class="language-plaintext highlighter-rouge">range()</code> function. OK I lied. Range is not really a function. It’s actually a type on it’s own called <code class="language-plaintext highlighter-rouge">range</code>.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">range</span><span class="s">'&gt;
+</span></pre></table></code></div></div><p>For now, it’s enough for you to know that <code class="language-plaintext highlighter-rouge">range</code> is much like <code class="language-plaintext highlighter-rouge">tuple</code>s (Remember the un-changeable lists from last lecture?) Also that range creates a sequence with the following properties:</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+</pre></table></code></div></div><p><code class="language-plaintext highlighter-rouge">start</code>: the first number in our range (defaults to <code class="language-plaintext highlighter-rouge">0</code>) <code class="language-plaintext highlighter-rouge">stop</code>: range stops <em>before</em> this index. (<a href="#why-range-stops-before">What?!</a>) <code class="language-plaintext highlighter-rouge">step</code>: this is the common difference between elements in our range. (defaults to <code class="language-plaintext highlighter-rouge">1</code>)</p><p>Let’s move on with our example and you’ll understand it more clearly.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+</pre></table></code></div></div><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre>0
+1
+2
+3
+4
+</pre></table></code></div></div><p>So you see, this is equivalent to using the list <code class="language-plaintext highlighter-rouge">[0, 1, 2, 3, 4]</code> the only difference is that it’s more versatile. In fact</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></table></code></div></div><p>For a sub-example let’s try changing the step.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></table></code></div></div><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre>0
+2
+4
+6
+8
+</pre></table></code></div></div><p>Here you can see that the <code class="language-plaintext highlighter-rouge">step</code> is quite literally “the step.” It’s how much our values increase in each new element. There’s one more cool thing we can do with <code class="language-plaintext highlighter-rouge">range()</code> out of the box and that’s reverse ranges.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></table></code></div></div><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre>10
+7
+4
+1
+</pre></table></code></div></div><p>Another thing that might be apparent is that because of the defaults of <code class="language-plaintext highlighter-rouge">start</code> and <code class="language-plaintext highlighter-rouge">step</code> . You can use <code class="language-plaintext highlighter-rouge">range()</code> without those two and still make it work. (They’ll be added in for you.)</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></table></code></div></div><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre>0
+1
+2
+3
+4
+</pre></table></code></div></div><h3 id="why-range-stops-before">Why range stops before</h3><p>Remember how we indexed our elements in a list or string?</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre>index: 0  1  2  3
+List: [0, 1, 2, 3]
+</pre></table></code></div></div><p>So <strong>arrays start at 0 (zero).</strong> Let’s take the <code class="language-plaintext highlighter-rouge">range(5)</code> for example and turn it into a list:</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></table></code></div></div><p>You remember I said the range stops at this index. And you can see it clearly here. The range stopped before the 5th index which is <code class="language-plaintext highlighter-rouge">5</code>. And by that, since the range starts at <code class="language-plaintext highlighter-rouge">0</code>, it stopped before getting to the actual number <code class="language-plaintext highlighter-rouge">5</code>. Practically, when defining a <code class="language-plaintext highlighter-rouge">range</code> (if you don’t define <code class="language-plaintext highlighter-rouge">start</code> and <code class="language-plaintext highlighter-rouge">stop</code>) you may think that the <code class="language-plaintext highlighter-rouge">stop</code> is equal to the number of integers you get as a result.</p><p>It’s, for this reason, better to think that range has a sea of infinite integers that go both ways. And when we define a <code class="language-plaintext highlighter-rouge">range</code> object we’re just taking a slice between our specified indexes.</p><h1 id="break-and-continue"><code class="language-plaintext highlighter-rouge">break</code> and <code class="language-plaintext highlighter-rouge">continue</code></h1><p>Like we can make loops, we can also break them and <code class="language-plaintext highlighter-rouge">break</code> does just that.</p><h2 id="example-1-2">Example 1</h2><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre><td class="rouge-code"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+        <span class="k">break</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Terminated loop."</span><span class="p">)</span>
+</pre></table></code></div></div><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre>0
+1
+2
+3
+4
+5
+</pre></table></code></div></div><p>Here the interpreter increased <code class="language-plaintext highlighter-rouge">x</code>’s value until <code class="language-plaintext highlighter-rouge">x == 6</code> in which case <code class="language-plaintext highlighter-rouge">break</code> ran. The thing you must take note here is that, the last <code class="language-plaintext highlighter-rouge">print()</code> function didn’t run.</p><p><code class="language-plaintext highlighter-rouge">continue</code> is much like break but what it does is not end the iteration altogether but just skip the current loop.</p><h2 id="example-2-2">Example 2</h2><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s">'string'</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="s">'r'</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+</pre></table></code></div></div><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre>s
+t
+i
+n
+g
+</pre></table></code></div></div><p>What happened here was when the loop came to the <code class="language-plaintext highlighter-rouge">r</code> character, the <code class="language-plaintext highlighter-rouge">letter == 'r'</code> condition was fulfilled and the interpreter ran <code class="language-plaintext highlighter-rouge">continue</code> which skipped the letter <code class="language-plaintext highlighter-rouge">r</code> and <em>continued</em> to the letter <code class="language-plaintext highlighter-rouge">i</code>.</p><h1 id="dictionaries">Dictionaries</h1><p><code class="language-plaintext highlighter-rouge">dict</code> is (not-so-surprisingly) the dictionary object. Dictionaries in python work the same way they do in real life. You have a term and you have a definition. The only difference here is that terms are called <code class="language-plaintext highlighter-rouge">keys</code> and definitions are called <code class="language-plaintext highlighter-rouge">values</code>.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">({</span><span class="s">'ikbal'</span><span class="p">:</span> <span class="s">'pretty'</span><span class="p">})</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">dict</span><span class="s">'&gt;
+</span></pre></table></code></div></div><p>Although you don’t need your values and keys to be <code class="language-plaintext highlighter-rouge">str</code>. They can be numbers, lists or anything you want (even custom objects but that’s for later!). And of course like any good dictionary you can have multiple key-value pairs in your dictionary.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s">'ikbal'</span><span class="p">:</span> <span class="s">'pretty'</span><span class="p">,</span>
+           <span class="s">'elif'</span><span class="p">:</span> <span class="s">'not pretty'</span><span class="p">}</span>
+</pre></table></code></div></div><p>The last thing to know about dictionaries is overriding previous pairs. The last definition will always override the first definition you write. For example</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s">'ikbal'</span><span class="p">:</span> <span class="s">'pretty'</span><span class="p">,</span>
+           <span class="s">'elif'</span><span class="p">:</span> <span class="s">'not pretty'</span><span class="p">,</span>
+           <span class="s">'ikbal'</span><span class="p">:</span> <span class="s">'not pretty'</span><span class="p">,</span>
+           <span class="s">'elif'</span><span class="p">:</span> <span class="s">'pretty'</span><span class="p">}</span>
+</pre></table></code></div></div><p>If we print this list we’ll get</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>{'ikbal': 'not pretty', 'elif': 'pretty'}
+</pre></table></code></div></div><p>We can refer to values in a dictionary with the following syntax:</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="n">dictionary</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+</pre></table></code></div></div><h2 id="example">Example</h2><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="n">grades</span> <span class="o">=</span> <span class="p">{</span><span class="s">'John'</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s">'Jake'</span><span class="p">:</span><span class="mi">85</span><span class="p">,</span> <span class="s">'Jolene'</span><span class="p">:</span><span class="mi">60</span><span class="p">}</span>
+</pre></table></code></div></div><p>If we want to get John’s grade, all we need to do is</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="n">johns_grade</span> <span class="o">=</span> <span class="n">grades</span><span class="p">[</span><span class="s">'John'</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">johns_grade</span><span class="p">)</span>
+</pre></table></code></div></div><p>Output:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>100
+</pre></table></code></div></div><p>Let’s talk about how to iterate over this dictionary of ours. If we want to iterate over just the keys</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">grades</span><span class="p">:</span>
+    <span class="p">...</span>
+    <span class="p">...</span>
+</pre></table></code></div></div><p>If we want to have both the keys and the values</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">grades</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="p">...</span>
+    <span class="p">...</span>
+</pre></table></code></div></div><h1 id="slicing-and-indexing">Slicing and Indexing</h1><p>We’re finally here. This section will cover all the ways you can manipulate <code class="language-plaintext highlighter-rouge">str</code>, <code class="language-plaintext highlighter-rouge">list</code>, <code class="language-plaintext highlighter-rouge">tuple</code> or what have you.</p><h2 id="indexing">Indexing</h2><p>Syntax:</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="nb">object</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+</pre></table></code></div></div><p>Yup. That’s all there is to it. Doesn’t matter which object either. If it’s index-able this is they way to do it.</p><h2 id="example-1-3">Example 1</h2><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="n">string</span> <span class="o">=</span> <span class="s">"index me coward. you're only gonna index a string."</span>
+</pre></table></code></div></div><p>Let’s take the letter at the 4th index of this string.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="n">indexed</span> <span class="o">=</span> <span class="n">string</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">indexed</span><span class="p">)</span>
+</pre></table></code></div></div><p>Output:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>'x'
+</pre></table></code></div></div><p>Done!</p><h2 id="example-2-3">Example 2</h2><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="n">lis</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</pre></table></code></div></div><p>Let’s index this list and get the element at 2nd index.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="n">indexed</span> <span class="o">=</span> <span class="n">lis</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">indexed</span><span class="p">)</span>
+</pre></table></code></div></div><p>Output:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>2
+</pre></table></code></div></div><p>Done!</p><p>Tuples are exactly the same as these two and the syntax never changes here, so I’ll pass that.</p><h2 id="slicing">Slicing</h2><p>Syntax:</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="nb">object</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">stop</span><span class="p">:</span><span class="n">step</span><span class="p">]</span>
+</pre></table></code></div></div><p>This is much like how we define our ranges.</p><p><code class="language-plaintext highlighter-rouge">start</code>: the first index in our slice (defaults to “the rest”) <code class="language-plaintext highlighter-rouge">stop</code>: range stops <em>before</em> this index. (defaults to “the rest”) <code class="language-plaintext highlighter-rouge">step</code>: this is the common difference between elements in our slice. (defaults to <code class="language-plaintext highlighter-rouge">1</code>)</p><h3 id="example-1-4">Example 1</h3><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="n">string</span> <span class="o">=</span> <span class="s">"this is a long string me thinks"</span>
+</pre></table></code></div></div><p>Let’s try to take the first word of this string. Our word <code class="language-plaintext highlighter-rouge">this</code> starts at the <code class="language-plaintext highlighter-rouge">0th</code> index and end before the <code class="language-plaintext highlighter-rouge">4th</code> index. So that’s what we’ll use. We don’t have to define our <code class="language-plaintext highlighter-rouge">step</code> since that’s <code class="language-plaintext highlighter-rouge">1</code> by default.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="n">sliced</span> <span class="o">=</span> <span class="n">string</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sliced</span><span class="p">)</span>
+</pre></table></code></div></div><p>Output:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>'this'
+</pre></table></code></div></div><h4 id="smarter-way">Smarter way</h4><p>There is a string method called <code class="language-plaintext highlighter-rouge">split()</code> that can ease our job immensely here. <code class="language-plaintext highlighter-rouge">split()</code> does just what it says, it splits. The syntax is</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="n">string</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="n">which_character_to_split</span><span class="p">,</span> <span class="n">how_many_times</span><span class="p">)</span>
+</pre></table></code></div></div><p>By default <code class="language-plaintext highlighter-rouge">split()</code> splits by <code class="language-plaintext highlighter-rouge">' '</code> (space character) and as many times it can. So for example in our case this would be</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">splitted</span> <span class="o">=</span> <span class="n">string</span><span class="p">.</span><span class="n">split</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">splitted</span><span class="p">)</span>
+<span class="p">[</span><span class="s">'this'</span><span class="p">,</span> <span class="s">'is'</span><span class="p">,</span> <span class="s">'a'</span><span class="p">,</span> <span class="s">'long'</span><span class="p">,</span> <span class="s">'string'</span><span class="p">,</span> <span class="s">'me'</span><span class="p">,</span> <span class="s">'thinks'</span><span class="p">]</span>
+</pre></table></code></div></div><p>And then we could just get the first element of this list with</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">splitted</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="s">'this'</span>
+</pre></table></code></div></div><h3 id="example-2-4">Example 2</h3><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="n">string</span> <span class="o">=</span> <span class="s">"this is a long string me thinks"</span>
+</pre></table></code></div></div><p>Let’s try first get every character before the 6th index and then get every character after and including the 6th index.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre><span class="n">before6</span> <span class="o">=</span> <span class="n">string</span><span class="p">[:</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">after6</span> <span class="o">=</span> <span class="n">string</span><span class="p">[</span><span class="mi">6</span><span class="p">:]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Every char &lt; 6th:"</span><span class="p">,</span> <span class="n">before6</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Every char &gt;= 6th:"</span><span class="p">,</span> <span class="n">after6</span><span class="p">)</span>
+</pre></table></code></div></div><p>Output:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre>Every char &lt; 6th: this i
+Every char &gt;= 6th: s a long string me thinks
+</pre></table></code></div></div><h3 id="example-3-1">Example 3</h3><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="n">lis</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+</pre></table></code></div></div><p>Let’s get the elements between 1st and 5th indices.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="n">sliced</span> <span class="o">=</span> <span class="n">lis</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sliced</span><span class="p">)</span>
+</pre></table></code></div></div><p>Notice how we don’t want the 1st index so we define <code class="language-plaintext highlighter-rouge">start</code> as 2.</p><p>Output:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>[2, 3, 4]
+</pre></table></code></div></div><h3 id="example-4-1">Example 4</h3><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
+</pre></table></code></div></div><p>Let’s get the every 5th element in this tuple</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="n">every5th</span> <span class="o">=</span> <span class="n">tup</span><span class="p">[::</span><span class="mi">5</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">every5th</span><span class="p">)</span>
+</pre></table></code></div></div><p>Notice here how we used the defaults for <code class="language-plaintext highlighter-rouge">start</code> and <code class="language-plaintext highlighter-rouge">stop</code> which were “the rest.” This will ensure that we start at the beginning of our tuple and end at the end.</p><p>Output:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>(0, 5, 10)
+</pre></table></code></div></div><h1 id="one-last-note-about-iterable-types">One last note about iterable types</h1><p>This part is to introduce you to the <code class="language-plaintext highlighter-rouge">len()</code> (length) function. It simply gives us how many elements there are in an iterable.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="mi">6</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="s">'string'</span><span class="p">)</span>
+<span class="mi">6</span>
+</pre></table></code></div></div><h1 id="homework"><a href="/posts/homework-two/">Homework</a></h1></div><div class="post-tail-wrapper text-muted"><div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href='/categories/python/'>Python</a>, <a href='/categories/lectures/'>Lectures</a>, <a href='/categories/notes/'>Notes</a></div><div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/tags/lecture/" class="post-tag no-text-decoration" >lecture</a></div><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> This post is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> by the author.</div><div class="share-wrapper"> <span class="share-label text-muted mr-1">Share</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=Lecture Notes 2 - python4me&url=https://python4me.github.io/posts/lecture-two/" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=Lecture Notes 2 - python4me&u=https://python4me.github.io/posts/lecture-two/" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://telegram.me/share?text=Lecture Notes 2 - python4me&url=https://python4me.github.io/posts/lecture-two/" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <i class="fa-fw fas fa-link small" onclick="copyLink()" data-toggle="tooltip" data-placement="top" title="Copy link"></i> </span></div></div></div></div></div><div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down"><div class="access"><div id="access-lastmod" class="post"> <span>Recent Update</span><ul class="post-content pl-0 pb-1 ml-1 mt-2"><li><a href="/posts/lecture-three/">Lecture Notes 3</a><li><a href="/posts/homework-three/">Homework 3</a><li><a href="/posts/homework-solution-three/">Homework Solutions 3</a><li><a href="/posts/homework-solution-two/">Homework Solutions 2</a><li><a href="/posts/lecture-two/">Lecture Notes 2</a></ul></div><div id="access-tags"> <span>Trending Tags</span><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/homework/">homework</a> <a class="post-tag" href="/tags/lecture/">lecture</a> <a class="post-tag" href="/tags/solutions/">solutions</a></div></div></div><div id="toc-wrapper" class="pl-0 pr-4 mb-5"> <span class="pl-3 pt-2 mb-2">Contents</span><nav id="toc" data-toggle="toc"></nav></div></div></div><div class="row"><div class="col-12 col-lg-11 col-xl-8"><div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><div id="related-posts" class="mt-5 mb-2 mb-sm-4"><h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3><div class="card-deck mb-4"><div class="card"> <a href="/posts/lecture-one/"><div class="card-body"> <span class="timeago small" > Nov 26, 2020 <i class="unloaded">2020-11-26T13:36:00+03:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Lecture Notes 1</h3><div class="text-muted small"><p> I’m hoping you all already installed python and sublime text (or an IDE of your choice) according to your operating system since I won’t be wasting time on that. Actually I got no way to waste time...</p></div></div></a></div><div class="card"> <a href="/posts/lecture-three/"><div class="card-body"> <span class="timeago small" > Dec 19, 2020 <i class="unloaded">2020-12-19T13:36:00+03:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Lecture Notes 3</h3><div class="text-muted small"><p> Input Here we’ll make use of the input() function (gasps). Example 1 1 2 3 &gt;&gt;&gt; input() boo 'boo' Here you might notice that input() acted like the echo command in bash. To be honest, ...</p></div></div></a></div><div class="card"> <a href="/posts/homework-one/"><div class="card-body"> <span class="timeago small" > Nov 26, 2020 <i class="unloaded">2020-11-26T14:36:00+03:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Homework 1</h3><div class="text-muted small"><p> You should be able to do the easy part with your current knowledge while advanced will need you to do some research on your own (It’s related to next week’s subject). Answers to both of these quest...</p></div></div></a></div></div></div><div class="post-navigation d-flex justify-content-between"> <a href="/posts/homework-solution-one/" class="btn btn-outline-primary"><p>Homework Solutions 1</p></a> <a href="/posts/homework-two/" class="btn btn-outline-primary"><p>Homework 2</p></a></div></div></div></div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script> <script type="text/javascript"> const imgs = document.querySelectorAll('#post-wrapper img'); const observer = lozad(imgs); observer.observe(); </script><footer class="d-flex w-100 justify-content-center"><div class="d-flex justify-content-between align-items-center"><div class="footer-left"><p class="mb-0"> © 2021 <a href="">Guess who</a>. <span data-toggle="tooltip" data-placement="top" title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some rights reserved.</span></p></div></div></footer></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-xl-11 post-content"><div id="search-hints"><h4 class="text-muted mb-4">Trending Tags</h4><a class="post-tag" href="/tags/homework/">homework</a> <a class="post-tag" href="/tags/lecture/">lecture</a> <a class="post-tag" href="/tags/solutions/">solutions</a></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><div id="mask"></div><a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.7.3/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="https://python4me.github.io{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"><div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>{categories}</div><div><i class="fa fa-tag fa-fw"></i>{tags}</div></div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">Oops! No result founds.</p>' }); </script> <script async src="https://www.googletagmanager.com/gtag/js?id="></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', ''); </script>

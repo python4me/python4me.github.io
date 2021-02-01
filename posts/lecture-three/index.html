@@ -1,0 +1,423 @@
+<!DOCTYPE html><html lang="en" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="theme" content="Chirpy v2.5.1"><meta name="generator" content="Jekyll v4.2.0" /><meta property="og:title" content="Lecture Notes 3" /><meta name="author" content="Guess Who" /><meta property="og:locale" content="en_US" /><meta name="description" content="Input" /><meta property="og:description" content="Input" /><link rel="canonical" href="https://python4me.github.io/posts/lecture-three/" /><meta property="og:url" content="https://python4me.github.io/posts/lecture-three/" /><meta property="og:site_name" content="python4me" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2020-12-19T13:36:00+03:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="Lecture Notes 3" /><meta name="twitter:site" content="@" /><meta name="twitter:creator" content="@Guess Who" /> <script type="application/ld+json"> {"description":"Input","author":{"@type":"Person","name":"Guess Who"},"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://python4me.github.io/posts/lecture-three/"},"url":"https://python4me.github.io/posts/lecture-three/","headline":"Lecture Notes 3","dateModified":"2020-12-19T13:36:00+03:00","datePublished":"2020-12-19T13:36:00+03:00","@context":"https://schema.org"}</script><title>Lecture Notes 3 | python4me</title><link rel="shortcut icon" href="/assets/img/favicons/favicon.ico" type="image/x-icon"><link rel="icon" href="/assets/img/favicons/favicon.ico" type="image/x-icon"><link rel="apple-touch-icon" href="/assets/img/favicons/apple-icon.png"><link rel="apple-touch-icon" href="/assets/img/favicons/apple-icon-precomposed.png"><link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicons/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicons/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicons/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicons/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicons/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicons/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicons/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicons/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicons/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/assets/img/favicons/manifest.json"><meta name='msapplication-config' content='/assets/img/favicons/browserconfig.xml'><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="/assets/img/favicons/ms-icon-144x144.png"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="preconnect" href="cdn.jsdelivr.net"><link rel="dns-prefetch" href="cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"><link rel="preload" as="style" href="/assets/css/post.css"><link rel="stylesheet" href="/assets/css/post.css"><link rel="preload" as="style" href="/assets/css/lib/bootstrap-toc.min.css"><link rel="stylesheet" href="/assets/css/lib/bootstrap-toc.min.css" /> <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script> <script async src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.15.0,npm/bootstrap@4/dist/js/bootstrap.min.js"></script> <script async src="/assets/js/post.min.js"></script> <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> <script defer src="/app.js"></script><body data-spy="scroll" data-target="#toc"><div id="sidebar" class="d-flex flex-column"><div id="nav-wrapper"><div id="profile-wrapper" class="d-flex flex-column"><div id="avatar" class="d-flex justify-content-center"> <a href="/" alt="avatar"> <img src="/assets/img/sample/avatar.png" alt="avatar" onerror="this.style.display='none'"> </a></div><div class="profile-text mt-3"><div class="site-title"> <a href="/">python4me</a></div><div class="site-subtitle font-italic"></div></div></div><ul class="nav flex-column"><li class="nav-item d-flex justify-content-center "> <a href="/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>HOME</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/about/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-info ml-xl-3 mr-xl-3 unloaded"></i> <span>ABOUT</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/archives/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>ARCHIVES</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/categories/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>CATEGORIES</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/tags/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-tags ml-xl-3 mr-xl-3 unloaded"></i> <span>TAGS</span> </a></ul></div><div class="sidebar-bottom d-flex flex-wrap justify-content-around mt-4"> <span id="mode-toggle-wrapper"> <i class="mode-toggle fas fa-sun" dark-mode-invisible></i> <i class="mode-toggle fas fa-moon" light-mode-invisible></i> <script type="text/javascript"> class ModeToggle { static get MODE_KEY() { return "mode"; } static get DARK_MODE() { return "dark"; } static get LIGHT_MODE() { return "light"; } constructor() { if (this.mode != null) { if (this.mode == ModeToggle.DARK_MODE) { if (!this.isSysDarkPrefer) { this.setDark(); } } else { if (this.isSysDarkPrefer) { this.setLight(); } } } var self = this; /* always follow the system prefers */ this.sysDarkPrefers.addListener(function() { if (self.mode != null) { if (self.mode == ModeToggle.DARK_MODE) { if (!self.isSysDarkPrefer) { self.setDark(); } } else { if (self.isSysDarkPrefer) { self.setLight(); } } self.clearMode(); } }); } /* constructor() */ setDark() { $('html').attr(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); } setLight() { $('html').attr(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); } clearMode() { $('html').removeAttr(ModeToggle.MODE_KEY); sessionStorage.removeItem(ModeToggle.MODE_KEY); } get sysDarkPrefers() { return window.matchMedia("(prefers-color-scheme: dark)"); } get isSysDarkPrefer() { return this.sysDarkPrefers.matches; } get isDarkMode() { return this.mode == ModeToggle.DARK_MODE; } get isLightMode() { return this.mode == ModeToggle.LIGHT_MODE; } get hasMode() { return this.mode != null; } get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); } flipMode() { if (this.hasMode) { if (this.isSysDarkPrefer) { if (this.isLightMode) { this.clearMode(); } else { this.setLight(); } } else { if (this.isDarkMode) { this.clearMode(); } else { this.setDark(); } } } else { if (this.isSysDarkPrefer) { this.setLight(); } else { this.setDark(); } } } /* flipMode() */ } /* ModeToggle */ let toggle = new ModeToggle(); $(".mode-toggle").click(function() { toggle.flipMode(); }); </script> </span> <span class="icon-border"></span></div></div><div id="topbar-wrapper" class="row justify-content-center topbar-down"><div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between"> <span id="breadcrumb"> <span> <a href="/"> Posts </a> </span> <span>Lecture Notes 3</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> Post</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" placeholder="Search..."> <i class="fa fa-times-circle fa-fw" id="search-cleaner"></i> </span> <span id="search-cancel" >Cancel</span></div></div><div id="main-wrapper"><div id="main"> <script src="https://combinatronics.com/python4me/python4me.github.io/master/assets/js/mermaid.min.js"></script><div class="row"><div id="post-wrapper" class="col-12 col-lg-11 col-xl-8"><div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><h1 data-toc-skip>Lecture Notes 3</h1><div class="post-meta text-muted d-flex flex-column"><div> Posted <span class="timeago " data-toggle="tooltip" data-placement="bottom" title="Sat, Dec 19, 2020, 1:36 PM +0300" > Dec 19, 2020 <i class="unloaded">2020-12-19T13:36:00+03:00</i> </span> by <span class="author"> Guess Who </span></div><div> Updated <span class="timeago lastmod" data-toggle="tooltip" data-placement="bottom" title="Mon, Feb 1, 2021, 11:02 AM +0300" > Feb 1 <i class="unloaded">2021-02-01T11:02:54+03:00</i> </span></div></div><div class="post-content"><h1 id="input">Input</h1><p>Here we’ll make use of the <code class="language-plaintext highlighter-rouge">input()</code> function (<em>gasps</em>).</p><h2 id="example-1">Example 1</h2><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="nb">input</span><span class="p">()</span>
+<span class="n">boo</span>
+<span class="s">'boo'</span>
+</pre></table></code></div></div><p>Here you might notice that <code class="language-plaintext highlighter-rouge">input()</code> acted like the <code class="language-plaintext highlighter-rouge">echo</code> command in bash. To be honest, this is all there is to it. When you use <code class="language-plaintext highlighter-rouge">input()</code>, the interpreter will wait for you to enter an input and then store that input in temporary memory.</p><h2 id="example-2">Example 2</h2><p>In a program we can capture this input and store it in a variable</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="n">our_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">our_input</span><span class="p">)</span>
+</pre></table></code></div></div><p>Like I’ve mentioned before, you can’t run this in Sublime, so we’ll launch a terminal and run it there.</p><div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre><span class="nv">$ </span>python3 input.py
+hello
+hello
+</pre></table></code></div></div><p>Sure enough, it works. And that’s all there is to it. The last thing to keep in mind can be, no matter what you enter, <code class="language-plaintext highlighter-rouge">input()</code> will give you a string (So the users can’t input arbitrary commands and take over your program). So if you want to work with integers you need to first convert your input to an integer.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="mi">123</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">str</span><span class="s">'&gt;
+</span></pre></table></code></div></div><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">()))</span>
+<span class="mi">123</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">int</span><span class="s">'&gt;
+</span></pre></table></code></div></div><h1 id="default-arguments">Default arguments</h1><p>This section is very simple. It is basically about giving function arguments a default value. (remember how <code class="language-plaintext highlighter-rouge">print()</code> had a default argument <code class="language-plaintext highlighter-rouge">\n</code>?)</p><h2 id="example-1-1">Example 1</h2><p>Let’s make a function that will invert a boolean it takes. For example if we give it <code class="language-plaintext highlighter-rouge">True</code> it’ll give us <code class="language-plaintext highlighter-rouge">False</code>. And let’s make it use <code class="language-plaintext highlighter-rouge">True</code> by default.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">invert</span><span class="p">(</span><span class="n">arg</span> <span class="o">=</span> <span class="bp">True</span><span class="p">):</span>
+    <span class="k">return</span> <span class="ow">not</span> <span class="n">arg</span>
+</pre></table></code></div></div><p>and that’s all there is to it! If you want a default for an argument, just do <code class="language-plaintext highlighter-rouge">arg = &lt;your desired default&gt;</code> where you define your arguments.</p><h1 id="scoping">Scoping</h1><p>The point of scoping is, to each his own. What do I mean by that? I mean that if you define a variable inside a function, that variable is <em>local</em> not <em>global</em> meaning, it is only defined inside that function.</p><h2 id="example-1-2">Example 1</h2><p>Let’s make a function and define a variable inside it. Afterwards, we’ll try printing our variable.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">definevar</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Value of x inside the fn"</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">definevar</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Value of x outside the fn"</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></table></code></div></div><p>Output:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre>Value of x inside the fn 4
+Traceback (most recent call last):
+  File "/home/user/lessons/scoping.py", line 5, in &lt;module&gt;
+    print("Value of x outside the fn", x)
+NameError: name 'x' is not defined
+</pre></table></code></div></div><p>As you see, the print statement inside our function ran just fine, but the one on the outside didn’t because <code class="language-plaintext highlighter-rouge">x</code> was only defined inside the function.</p><h2 id="example-2-1">Example 2</h2><p>Let’s try analyzing the code below</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+	<span class="k">def</span> <span class="nf">g</span><span class="p">():</span>
+		<span class="n">x</span> <span class="o">=</span> <span class="s">'abc'</span>
+		<span class="k">print</span><span class="p">(</span><span class="s">"x ="</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+	<span class="k">def</span> <span class="nf">h</span><span class="p">():</span>
+		<span class="n">z</span> <span class="o">=</span> <span class="n">x</span>
+		<span class="k">print</span><span class="p">(</span><span class="s">"z ="</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+	<span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">"x ="</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+	<span class="n">h</span><span class="p">()</span>
+	<span class="n">g</span><span class="p">()</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">"x ="</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+	<span class="k">return</span> <span class="n">g</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">z</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"x ="</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"z ="</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+<span class="n">z</span><span class="p">()</span>
+</pre></table></code></div></div><p>Output:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre><td class="rouge-code"><pre>x = 4
+z = 4
+x = abc
+x = 4
+x = 3
+z = &lt;function f.&lt;locals&gt;.g at 0x7f34648cdbf8&gt;
+x = abc
+</pre></table></code></div></div><p>Oh wow. Now what happened here? Let’s trace it back</p><ol><li><p>line 15 <code class="language-plaintext highlighter-rouge">x = 3</code></p><li><p>line 17 <code class="language-plaintext highlighter-rouge">z = f(x)</code></p><ol><li><p>line 8 <code class="language-plaintext highlighter-rouge">x = x+1</code></p><li><p>line 9 <code class="language-plaintext highlighter-rouge">print("x =", x)</code></p><li><p>line 10 <code class="language-plaintext highlighter-rouge">h()</code></p><ol><li><p>line 6 <code class="language-plaintext highlighter-rouge">z = x</code></p><li><p>line 7 <code class="language-plaintext highlighter-rouge">print("z =", z)</code></p><p>This will print a local variable and not the one in 2.</p></ol><li><p>line 11 <code class="language-plaintext highlighter-rouge">g()</code></p><ol><li>line 3 <code class="language-plaintext highlighter-rouge">x = 'abc'</code><li>line 4 <code class="language-plaintext highlighter-rouge">print("x =", x)</code></ol><li><p>line 12 <code class="language-plaintext highlighter-rouge">print("x =", x)</code></p><li><p>line 13 <code class="language-plaintext highlighter-rouge">return g</code></p><p>Notice how we return the <code class="language-plaintext highlighter-rouge">g</code> function itself. So <code class="language-plaintext highlighter-rouge">f()</code>’s value is a function itself. This means when we do <code class="language-plaintext highlighter-rouge">z = f()</code> then <code class="language-plaintext highlighter-rouge">z == g</code>. This is why we got <code class="language-plaintext highlighter-rouge">z = &lt;function f.&lt;locals&gt;.g at 0x7f34648cdbf8&gt;</code> in our output.</p></ol><li><p>line 19 <code class="language-plaintext highlighter-rouge">print("x =", x)</code></p><li><p>line 20 <code class="language-plaintext highlighter-rouge">print("z =", z)</code></p><li><p>line 21 <code class="language-plaintext highlighter-rouge">z()</code></p><p>Since <code class="language-plaintext highlighter-rouge">z == g</code> this is basically <code class="language-plaintext highlighter-rouge">g()</code></p></ol><p>But how do we define a global variable inside a function? Is all hope lost? Simple:</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">x</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">f</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></table></code></div></div><p>Output:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>5
+</pre></table></code></div></div><p><code class="language-plaintext highlighter-rouge">global</code>allows us to make our variables global. (shocking!)</p><h1 id="recursion">Recursion</h1><p>Recursion is calling a function inside that function. What do I mean?</p><h2 id="example-1-3">Example 1</h2><p>Consider the Fibonacci function</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+    <span class="k">return</span> <span class="n">a</span>
+</pre></table></code></div></div><p>To understand this function better, let’s take a look at the values <code class="language-plaintext highlighter-rouge">a</code> and <code class="language-plaintext highlighter-rouge">b</code> have <code class="language-plaintext highlighter-rouge">for i in range(n)</code></p><div class="table-wrapper"><table><thead><tr><th>Step<th>a<th>b<tbody><tr><td>0<td>0<td>1<tr><td>1<td>1<td>1<tr><td>2<td>1<td>2<tr><td>3<td>2<td>3<tr><td>4<td>3<td>5<tr><td>5<td>5<td>8<tr><td>6<td>8<td>13<tr><td>7<td>13<td>21<tr><td>8<td>21<td>35</table></div><p>So we’re just slowly shifting our pairs through the Fibonacci set here. I like to think of it like we’re sliding a magnifier through the Fibonacci set.</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="/assets/img/posts/python/3/slider.png" alt="" /></p><p>How might we write this with recursion? Simple. Actually it’s simpler than the one without recursion. Let’s remember what the Fibonacci function actually meant.</p><p>\( F(N) = F(N-1)+F(N-2) \) where \( F(0)=1 \) and \( F(1)=1 \)</p><p>This seems like the exact recipe for a recursive function, doesn’t it? Translating math into pseudo-code (code that doesn’t run) we’d get:</p><p><code class="language-plaintext highlighter-rouge"> fib(n) returns fib(n-1) + fib(n-2)</code> where <code class="language-plaintext highlighter-rouge">fib(0) returns 1</code> and <code class="language-plaintext highlighter-rouge">fib(1) returns 1</code></p><p>So first we’ll check if <code class="language-plaintext highlighter-rouge">n</code> is <code class="language-plaintext highlighter-rouge">0</code> or <code class="language-plaintext highlighter-rouge">1</code> and return <code class="language-plaintext highlighter-rouge">1</code> if that’s the case. If not, we’ll return <code class="language-plaintext highlighter-rouge">fib(n-1)+fib(n-2)</code>.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+</pre></table></code></div></div><p>Done.</p><h2 id="example-2-2">Example 2</h2><p>A palindrome is a phrase whose characters are read the same from the left or the right. For example: “Madam, I’m Adam.”</p><p>In this example we’ll try to make a function that tests whether a string is a palindrome. This is also a nice opportunity for me to introduce you to the <strong>divide and conquer paradigm</strong>. Divide and conquer as it’s name is about breaking down a problem into smaller problems that are easier to handle. We’ll make a parent <code class="language-plaintext highlighter-rouge">isPalindrome(s)</code> function with child functions, and each child function will handle a different sub-problem of our goal. Our sub-problems are:</p><ol><li>Remove all spaces and punctuation from the string and turn it into a single word with all lowercase characters.<li>Recursively check whether the last and the first character in our word is the same.</ol><p>For the “Madam, I’m Adam.” example,</p><ol><li><p>Turn our string into “madamimadam”</p><li><ol><li><p>Check whether the first and last letters are the same</p><li><p>Check whether the second and second from last letters are the same.</p><p>…</p></ol></ol><p>We’ll first create our function and inside it, create a <code class="language-plaintext highlighter-rouge">toChars(s)</code> function.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">isPalindrome</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">toChars</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+</pre></table></code></div></div><p>First we’ll redefine our string to be all lowercase.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>        <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">lower</span><span class="p">()</span>
+</pre></table></code></div></div><p>To remove punctuation we’ll first make an empty string. We’ll go over our string character by character, and then, we’ll go and check if the character is a letter or a number. If that’s the case we’ll add our character to our empty string.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre>    <span class="n">letters</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="s">'abcdefghijklmnopqrstuvwxyz'</span><span class="p">:</span>
+            <span class="n">letters</span> <span class="o">=</span> <span class="n">letters</span> <span class="o">+</span> <span class="n">c</span>
+</pre></table></code></div></div><p>Finally, we can return our now sanitized string.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>        <span class="k">return</span> <span class="n">letters</span>
+</pre></table></code></div></div><p>Our <code class="language-plaintext highlighter-rouge">toChars(s)</code> function is complete. Now, on to the <code class="language-plaintext highlighter-rouge">isPal(s)</code> function. This is where the magic will happen.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>    <span class="k">def</span> <span class="nf">isPal</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+</pre></table></code></div></div><p>Now as you might’ve guessed we need an initial condition. To build recursive functions we need to predefine <em>some</em> situations so that the function has something to fall back on. In this case our initial condition is when there are no letters or only one letter left. 0 and 1 letter words are always palindromes.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">True</span>
+</pre></table></code></div></div><p>Now if the initial condition isn’t met we’ll recursively check palindrome-ness. How might we do this? We’ll check the first and last letters; remove them from our string; and re-run our function with the shorter, new string.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre>    <span class="k">else</span><span class="p">:</span>
+        <span class="n">answer</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="n">isPal</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">answer</span>
+</pre></table></code></div></div><p>Here we have a logical statement. The interpreter will check the first statement, <code class="language-plaintext highlighter-rouge">s[0] == s[-1]</code> <em>and</em> then run <code class="language-plaintext highlighter-rouge">isPal(s[1:-1])</code> which will check <code class="language-plaintext highlighter-rouge">s[1:-1][0] == s[1:-1][1] </code> and so on until <code class="language-plaintext highlighter-rouge">len(s)</code> is smaller than or equal to 1.</p><p>Good. Now we need to put this all together and run our functions and return the result. Think of this as composite functions.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>    <span class="k">return</span> <span class="n">isPal</span><span class="p">(</span><span class="n">toChars</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+</pre></table></code></div></div><p>And this concludes our function.</p><p>Using this example I want to introduce yet another concept: <strong>test suites</strong>. Test suites are functions that test other functions.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">testIsPalindrome</span><span class="p">():</span>
+</pre></table></code></div></div><p>We’ll keep it simple and test only two strings: dogGod (<em>is</em> a palindrome) and doGood (<em>isn’t</em> a palindrome). We’ll just print what we’re testing and a logical statement stating whether the test went fine.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">testIsPalindrome</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Try dogGod"</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">isPalindrome</span><span class="p">(</span><span class="s">"dogGod"</span><span class="p">)</span> <span class="o">==</span> <span class="bp">True</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Try doGood"</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">isPalindrome</span><span class="p">(</span><span class="s">"doGood"</span><span class="p">)</span> <span class="o">==</span> <span class="bp">False</span><span class="p">)</span>
+</pre></table></code></div></div><p>And finally we’ll run the tests:</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="n">testIsPalindrome</span><span class="p">()</span>
+</pre></table></code></div></div><p>The output is:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre>Try dogGod
+True
+Try doGood
+True
+</pre></table></code></div></div><p>So we’re all good!</p><h3 id="code-in-full">Code in full</h3><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">isPalindrome</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">toChars</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">lower</span><span class="p">()</span>
+        <span class="n">letters</span> <span class="o">=</span> <span class="s">''</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="s">'abcdefghijklmnopqrstuvwxyz'</span><span class="p">:</span>
+                <span class="n">letters</span> <span class="o">=</span> <span class="n">letters</span> <span class="o">+</span> <span class="n">c</span>
+        <span class="k">return</span> <span class="n">letters</span>
+    <span class="k">def</span> <span class="nf">isPal</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">answer</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="n">isPal</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+            <span class="k">return</span> <span class="n">answer</span>
+
+    <span class="k">return</span> <span class="n">isPal</span><span class="p">(</span><span class="n">toChars</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">testIsPalindrome</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Try dogGod"</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">isPalindrome</span><span class="p">(</span><span class="s">"dogGod"</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Try doGood"</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">isPalindrome</span><span class="p">(</span><span class="s">"doGood"</span><span class="p">))</span>
+
+<span class="n">testIsPalindrome</span><span class="p">()</span>
+</pre></table></code></div></div><h1 id="list-methods">List methods</h1><p>Speaking of tying loose ends, we need to come back to lists (<em>again, I know, but for the last time I promise</em>)</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">lis</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></table></code></div></div><ol><li><p><strong>Inserting:</strong> Adding an item to a list at a specific location.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre> <span class="o">&gt;&gt;&gt;</span> <span class="n">lis</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'inserted'</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">lis</span>
+ <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s">'inserted'</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></table></code></div></div><li><p><strong>Count:</strong> How many times an object appears in a list.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre> <span class="o">&gt;&gt;&gt;</span> <span class="n">lis</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+ <span class="mi">1</span>
+</pre></table></code></div></div><li><p><strong>Append:</strong> Adds an item to the end of the list.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre> <span class="o">&gt;&gt;&gt;</span> <span class="n">lis</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">'appended'</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">lis</span>
+ <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s">'inserted'</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s">'appended'</span><span class="p">]</span>
+</pre></table></code></div></div><li><p><strong>Extend:</strong> Adds a list to the end of another list.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre> <span class="o">&gt;&gt;&gt;</span> <span class="n">lis2</span> <span class="o">=</span> <span class="p">[</span><span class="s">'extended1'</span><span class="p">,</span> <span class="s">'extended2'</span><span class="p">,</span> <span class="s">'extended3'</span><span class="p">]</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">lis</span><span class="p">.</span><span class="n">extend</span><span class="p">(</span><span class="n">lis2</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">lis</span>
+ <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s">'inserted'</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s">'appended'</span><span class="p">,</span> <span class="s">'extended1'</span><span class="p">,</span> <span class="s">'extended2'</span><span class="p">,</span> <span class="s">'extended3'</span><span class="p">]</span>
+</pre></table></code></div></div><li><p><strong>Pop:</strong> Removes an element at an index, and also returns that element.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre> <span class="o">&gt;&gt;&gt;</span> <span class="n">lis</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+ <span class="mi">0</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">lis</span>
+ <span class="p">[</span><span class="s">'inserted'</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s">'appended'</span><span class="p">,</span> <span class="s">'extended1'</span><span class="p">,</span> <span class="s">'extended2'</span><span class="p">]</span>
+</pre></table></code></div></div><p>This will remove the last element if we use it without an attribute.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre> <span class="o">&gt;&gt;&gt;</span> <span class="n">lis</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span>
+ <span class="s">'extended3'</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">lis</span>
+ <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s">'inserted'</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s">'appended'</span><span class="p">,</span> <span class="s">'extended1'</span><span class="p">,</span> <span class="s">'extended2'</span><span class="p">]</span>
+</pre></table></code></div></div><li><p><strong>Reverse:</strong> Reverses a list.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre> <span class="o">&gt;&gt;&gt;</span> <span class="n">lis</span><span class="p">.</span><span class="n">reverse</span><span class="p">()</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">lis</span>
+ <span class="p">[</span><span class="s">'extended2'</span><span class="p">,</span> <span class="s">'extended1'</span><span class="p">,</span> <span class="s">'appended'</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s">'inserted'</span><span class="p">]</span>
+</pre></table></code></div></div><li><p><strong>Sorting:</strong> Sorts a list.</p><p>The default sort for a list is ascending.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre> <span class="o">&gt;&gt;&gt;</span> <span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">numlist</span><span class="p">.</span><span class="n">sort</span><span class="p">()</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">numlist</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">22</span><span class="p">]</span>
+</pre></table></code></div></div><p>You can also sort lists of strings.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre> <span class="o">&gt;&gt;&gt;</span> <span class="n">strlist</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span><span class="s">'d'</span><span class="p">,</span><span class="s">'c'</span><span class="p">,</span><span class="s">'b'</span><span class="p">]</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">strlist</span><span class="p">.</span><span class="n">sort</span><span class="p">()</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">strlist</span>
+ <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">,</span> <span class="s">'d'</span><span class="p">]</span>
+</pre></table></code></div></div><p>Or any type of predefined object for that matter<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>. When sorting lists of lists, the interpreter looks at the average value of the lists.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre> <span class="o">&gt;&gt;&gt;</span> <span class="n">listoflist</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">]]</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">listoflist</span><span class="p">.</span><span class="n">sort</span><span class="p">()</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">listoflist</span>
+ <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">]]</span>
+</pre></table></code></div></div><p>The one thing you cannot do is sorting a list with different types.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre> <span class="o">&gt;&gt;&gt;</span> <span class="n">lis</span> <span class="o">=</span> <span class="p">[</span><span class="s">'extended2'</span><span class="p">,</span> <span class="s">'extended1'</span><span class="p">,</span> <span class="s">'appended'</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s">'inserted'</span><span class="p">]</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">lis</span><span class="p">.</span><span class="n">sort</span><span class="p">()</span>
+ <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+   <span class="n">File</span> <span class="s">"&lt;stdin&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+ <span class="nb">TypeError</span><span class="p">:</span> <span class="s">'&lt;'</span> <span class="ow">not</span> <span class="n">supported</span> <span class="n">between</span> <span class="n">instances</span> <span class="n">of</span> <span class="s">'int'</span> <span class="ow">and</span> <span class="s">'str'</span>
+</pre></table></code></div></div><p>We could get around this by using the <code class="language-plaintext highlighter-rouge">key</code> parameter. Whatever function we give to the <code class="language-plaintext highlighter-rouge">key</code> parameter is applied to all objects and the list is only sorted afterwards.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre> <span class="o">&gt;&gt;&gt;</span> <span class="n">lis</span><span class="p">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">lis</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s">'appended'</span><span class="p">,</span> <span class="s">'extended1'</span><span class="p">,</span> <span class="s">'extended2'</span><span class="p">,</span> <span class="s">'inserted'</span><span class="p">]</span>
+</pre></table></code></div></div><p>You might be confused to see the first four elements as integers not strings. Wasn’t the key supposed to be applied to all elements? Yes, it was, but that’s only temporary. The key is applied to each element and the sort is done according to the results but the original elements are the ones being sorted. So even when you define a key, only the order of the elements change, not the elements themselves.</p><p>To turn the order of sort, you can define the parameter <code class="language-plaintext highlighter-rouge">reverse</code> as <code class="language-plaintext highlighter-rouge">True</code>.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre> <span class="o">&gt;&gt;&gt;</span> <span class="n">lis</span><span class="p">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">lis</span>
+ <span class="p">[</span><span class="s">'inserted'</span><span class="p">,</span> <span class="s">'extended2'</span><span class="p">,</span> <span class="s">'extended1'</span><span class="p">,</span> <span class="s">'appended'</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</pre></table></code></div></div><p>You can also use the function <code class="language-plaintext highlighter-rouge">sorted()</code> which returns a sorted version of the same function.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre> <span class="o">&gt;&gt;&gt;</span> <span class="n">numlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">numlist</span><span class="p">)</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">22</span><span class="p">]</span>
+</pre></table></code></div></div></ol><h1 id="list-comprehension">List comprehension</h1><p>Let’s try making a function that checks if an element in list <code class="language-plaintext highlighter-rouge">l1</code> is also in list <code class="language-plaintext highlighter-rouge">l2</code>. And if it is, we’ll remove it from <code class="language-plaintext highlighter-rouge">l1</code>. At this point of the course, I believe it’ll be easy for you to imagine how we might do this. We just need to loop over the first list and check if the looped elements are in <code class="language-plaintext highlighter-rouge">l2</code> one by one.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">removeDups</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">l1</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">l2</span><span class="p">:</span>
+            <span class="n">l1</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</pre></table></code></div></div><p>Let’s write a test suite and test our function.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">testDups</span><span class="p">():</span>
+    <span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+    <span class="n">l2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+    <span class="n">removeDups</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'l1 ='</span><span class="p">,</span> <span class="n">l1</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">l1</span> <span class="o">==</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+</pre></table></code></div></div><p>When we run our <code class="language-plaintext highlighter-rouge">testDups()</code>,</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="n">testDups</span><span class="p">()</span>
+</pre></table></code></div></div><p>the output is:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre>l1 = [2, 3, 4]
+False
+</pre></table></code></div></div><p>Wait a second. What’s wrong? Well, the problem occurs when we try to change a list while we’re looping over it. The indexing in a for loop only happens once.</p><div class="table-wrapper"><table><thead><tr><th>Index<th>Value<th>The current <code class="language-plaintext highlighter-rouge">l1</code><tbody><tr><td><code class="language-plaintext highlighter-rouge">0</code><td><code class="language-plaintext highlighter-rouge">1</code><td><code class="language-plaintext highlighter-rouge">[2, 3, 4]</code><tr><td><code class="language-plaintext highlighter-rouge">1</code><td><code class="language-plaintext highlighter-rouge">3</code><td><code class="language-plaintext highlighter-rouge">[2, 3, 4]</code><tr><td><code class="language-plaintext highlighter-rouge">2</code><td><code class="language-plaintext highlighter-rouge">4</code><td><code class="language-plaintext highlighter-rouge">[2, 3, 4]</code></table></div><p>So while the numbers shift, the indices stay the same, and this causes a mismatch between elements. How can we prevent this? We’ll use <strong>list comprehension</strong>.</p><p>List comprehension offers a shorter syntax when we want to play with lists. For example to achieve what we tried with <code class="language-plaintext highlighter-rouge">removeDups(l1, l2)</code> we can just do:</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">l2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="n">element</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">l1</span> <span class="k">if</span> <span class="n">element</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">l2</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></table></code></div></div><p>Translating this into English: “Give me that element for each element in <code class="language-plaintext highlighter-rouge">l1</code> if element isn’t in <code class="language-plaintext highlighter-rouge">l2</code>.”</p><p>This syntax is also useful for creating dictionaries or tuples or what have you. For example we can try creating a dictionary where keys are numbers from a list and values are <code class="language-plaintext highlighter-rouge">True</code> or <code class="language-plaintext highlighter-rouge">False</code> depending on whether the numbers are even or not.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">{</span> <span class="n">k</span><span class="p">:</span><span class="ow">not</span> <span class="nb">bool</span><span class="p">(</span><span class="n">k</span><span class="o">%</span><span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">l</span> <span class="p">}</span>
+</pre></table></code></div></div><h1 id="map-and-lambda">Map and Lambda</h1><p>Let’s start with <code class="language-plaintext highlighter-rouge">map()</code>. <code class="language-plaintext highlighter-rouge">map()</code> is a function that, as it’s name, maps a function to a group of objects. For example if I wanted to apply the function <code class="language-plaintext highlighter-rouge">int()</code> to each element in list <code class="language-plaintext highlighter-rouge">['1','2','3','4']</code> then I would simply do:</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="p">[</span><span class="s">'1'</span><span class="p">,</span> <span class="s">'2'</span><span class="p">,</span> <span class="s">'3'</span><span class="p">,</span> <span class="s">'4'</span><span class="p">])</span>
+<span class="o">&lt;</span><span class="nb">map</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x7300d211ffd0</span><span class="o">&gt;</span>
+</pre></table></code></div></div><p>As you notice, this gave us a map object instead of a list, but not to worry; we can do whatever we want with this map object as it’s an iterable. So for example:</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="p">[</span><span class="s">'1'</span><span class="p">,</span> <span class="s">'2'</span><span class="p">,</span> <span class="s">'3'</span><span class="p">,</span> <span class="s">'4'</span><span class="p">]):</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="p">...</span> 
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+</pre></table></code></div></div><p>Or if you don’t like not seeing what you have clearly, you can just convert your map object into a list:</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="p">[</span><span class="s">'1'</span><span class="p">,</span> <span class="s">'2'</span><span class="p">,</span> <span class="s">'3'</span><span class="p">,</span> <span class="s">'4'</span><span class="p">]))</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></table></code></div></div><p>That’s it for <code class="language-plaintext highlighter-rouge">map()</code>. Now what does <code class="language-plaintext highlighter-rouge">lambda</code> have to do with all these? <code class="language-plaintext highlighter-rouge">lambda</code> is used to create functions. Often thought of as anonymous function creator, it actually adds no functionality and is only a shorthand form of what we regularly do to define functions. So for example think about the function \( f(x)=x^2 \). One way to define it might be</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">c</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="p">...</span>     <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="p">...</span>
+</pre></table></code></div></div><p>But another way to define it is</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+</pre></table></code></div></div><p>So to define a function (<em>lazily</em>) we can just use the syntax <code class="language-plaintext highlighter-rouge">lambda &lt;input&gt;:&lt;output&gt;</code>. One thing to note here is that the name of the second function isn’t <code class="language-plaintext highlighter-rouge">f</code>. <code class="language-plaintext highlighter-rouge">f</code> there is just a variable we use to reference an <em>anonymous function</em>.</p><p>Any function you define, when you try to print it, gives you the function name:</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span>
+<span class="o">&lt;</span><span class="n">function</span> <span class="n">c</span> <span class="n">at</span> <span class="mh">0x75f4967a21e0</span><span class="o">&gt;</span>
+</pre></table></code></div></div><p>But with <code class="language-plaintext highlighter-rouge">lambda</code> functions, there is no name to be given</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">f</span>
+<span class="o">&lt;</span><span class="n">function</span> <span class="o">&lt;</span><span class="k">lambda</span><span class="o">&gt;</span> <span class="n">at</span> <span class="mh">0x75f4967a2158</span><span class="o">&gt;</span>
+</pre></table></code></div></div><p>These <code class="language-plaintext highlighter-rouge">lambda</code> expressions become useful when we want to map a custom function but we’re too lazy to define it somewhere in our code (or we just want to keep our code simple)</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">sqrtmap</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="s">'1'</span><span class="p">,</span> <span class="s">'2'</span><span class="p">,</span> <span class="s">'3'</span><span class="p">,</span> <span class="s">'4'</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="n">sqrtmap</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
+</pre></table></code></div></div><h2 id="homework"><a href="/posts/homework-three/">Homework</a></h2><div class="footnotes" role="doc-endnotes"><ol><li id="fn:1" role="doc-endnote"><p> __lt__ and __eq__ magic methods have to be defined for an object type to be sortable. We’ll get to this later when we look at how to create our own object types. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p></ol></div></div><div class="post-tail-wrapper text-muted"><div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href='/categories/python/'>Python</a>, <a href='/categories/lectures/'>Lectures</a>, <a href='/categories/notes/'>Notes</a></div><div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/tags/lecture/" class="post-tag no-text-decoration" >lecture</a></div><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> This post is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> by the author.</div><div class="share-wrapper"> <span class="share-label text-muted mr-1">Share</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=Lecture Notes 3 - python4me&url=https://python4me.github.io/posts/lecture-three/" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=Lecture Notes 3 - python4me&u=https://python4me.github.io/posts/lecture-three/" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://telegram.me/share?text=Lecture Notes 3 - python4me&url=https://python4me.github.io/posts/lecture-three/" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <i class="fa-fw fas fa-link small" onclick="copyLink()" data-toggle="tooltip" data-placement="top" title="Copy link"></i> </span></div></div></div></div></div><div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down"><div class="access"><div id="access-lastmod" class="post"> <span>Recent Update</span><ul class="post-content pl-0 pb-1 ml-1 mt-2"><li><a href="/posts/lecture-three/">Lecture Notes 3</a><li><a href="/posts/homework-three/">Homework 3</a><li><a href="/posts/homework-solution-three/">Homework Solutions 3</a><li><a href="/posts/homework-solution-two/">Homework Solutions 2</a><li><a href="/posts/lecture-two/">Lecture Notes 2</a></ul></div><div id="access-tags"> <span>Trending Tags</span><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/homework/">homework</a> <a class="post-tag" href="/tags/lecture/">lecture</a> <a class="post-tag" href="/tags/solutions/">solutions</a></div></div></div><div id="toc-wrapper" class="pl-0 pr-4 mb-5"> <span class="pl-3 pt-2 mb-2">Contents</span><nav id="toc" data-toggle="toc"></nav></div></div></div><div class="row"><div class="col-12 col-lg-11 col-xl-8"><div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><div id="related-posts" class="mt-5 mb-2 mb-sm-4"><h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3><div class="card-deck mb-4"><div class="card"> <a href="/posts/lecture-one/"><div class="card-body"> <span class="timeago small" > Nov 26, 2020 <i class="unloaded">2020-11-26T13:36:00+03:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Lecture Notes 1</h3><div class="text-muted small"><p> I’m hoping you all already installed python and sublime text (or an IDE of your choice) according to your operating system since I won’t be wasting time on that. Actually I got no way to waste time...</p></div></div></a></div><div class="card"> <a href="/posts/lecture-two/"><div class="card-body"> <span class="timeago small" > Dec 12, 2020 <i class="unloaded">2020-12-12T13:36:00+03:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Lecture Notes 2</h3><div class="text-muted small"><p> I have said we’d go into lists et al. in a later lecture and here we are. Iteration as its name is about iterating. You have an object with multiple (or just one) elements and you cycle over them (...</p></div></div></a></div><div class="card"> <a href="/posts/homework-one/"><div class="card-body"> <span class="timeago small" > Nov 26, 2020 <i class="unloaded">2020-11-26T14:36:00+03:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Homework 1</h3><div class="text-muted small"><p> You should be able to do the easy part with your current knowledge while advanced will need you to do some research on your own (It’s related to next week’s subject). Answers to both of these quest...</p></div></div></a></div></div></div><div class="post-navigation d-flex justify-content-between"> <a href="/posts/homework-solution-two/" class="btn btn-outline-primary"><p>Homework Solutions 2</p></a> <a href="/posts/homework-three/" class="btn btn-outline-primary"><p>Homework 3</p></a></div></div></div></div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script> <script type="text/javascript"> const imgs = document.querySelectorAll('#post-wrapper img'); const observer = lozad(imgs); observer.observe(); </script><footer class="d-flex w-100 justify-content-center"><div class="d-flex justify-content-between align-items-center"><div class="footer-left"><p class="mb-0"> © 2021 <a href="">Guess who</a>. <span data-toggle="tooltip" data-placement="top" title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some rights reserved.</span></p></div></div></footer></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-xl-11 post-content"><div id="search-hints"><h4 class="text-muted mb-4">Trending Tags</h4><a class="post-tag" href="/tags/homework/">homework</a> <a class="post-tag" href="/tags/lecture/">lecture</a> <a class="post-tag" href="/tags/solutions/">solutions</a></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><div id="mask"></div><a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.7.3/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="https://python4me.github.io{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"><div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>{categories}</div><div><i class="fa fa-tag fa-fw"></i>{tags}</div></div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">Oops! No result founds.</p>' }); </script> <script async src="https://www.googletagmanager.com/gtag/js?id="></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', ''); </script>
