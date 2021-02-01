@@ -426,7 +426,7 @@ Speaking of tying loose ends, we need to come back to lists (_again, I know, but
 	[0, 'inserted', 1, 2, 3, 4, 'appended', 'extended1', 'extended2', 'extended3']
 	```
 
-5. **Pop:** Removes an element at an index, and also returns that element. ()
+5. **Pop:** Removes an element at an index, and also returns that element.
 
 	```python
 	>>> lis.pop(0)
