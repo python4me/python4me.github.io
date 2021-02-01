@@ -232,7 +232,7 @@ This seems like the exact recipe for a recursive function, doesn't it? Translati
 
 ` fib(n) returns fib(n-1) + fib(n-2)` where `fib(0) returns 1` and `fib(1) returns 1`
 
-So first we'll check if `n` is `0` or `1` and return `1` if that's the case. If not, we'll return `fib(n)+fib(n-2)`.
+So first we'll check if `n` is `0` or `1` and return `1` if that's the case. If not, we'll return `fib(n-1)+fib(n-2)`.
 
 ```python
 def fib(n):
