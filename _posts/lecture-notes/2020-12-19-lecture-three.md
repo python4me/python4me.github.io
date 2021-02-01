@@ -248,7 +248,7 @@ Done.
 
 A palindrome is a phrase whose characters are read the same from the left or the right. For example: "Madam, I'm Adam."
 
-In this example we'll try to make a function that tests whether a string is a palindrome. This is also a nice opportunity for me to introduce you to the ==divide and conquer paradigm==. Divide and conquer as it's name is about breaking down a problem into smaller problems that are easier to handle. We'll make a parent `isPalindrome(s)` function with child functions, and each child function will handle a different sub-problem of our goal. Our sub-problems are:
+In this example we'll try to make a function that tests whether a string is a palindrome. This is also a nice opportunity for me to introduce you to the **divide and conquer paradigm**. Divide and conquer as it's name is about breaking down a problem into smaller problems that are easier to handle. We'll make a parent `isPalindrome(s)` function with child functions, and each child function will handle a different sub-problem of our goal. Our sub-problems are:
 
 1. Remove all spaces and punctuation from the string and turn it into a single word with all lowercase characters.
 2. Recursively check whether the last and the first character in our word is the same.
@@ -324,7 +324,7 @@ Good. Now we need to put this all together and run our functions and return the 
 
 And this concludes our function.
 
-Using this example I want to introduce yet another concept: ==test suites==. Test suites are functions that test other functions.
+Using this example I want to introduce yet another concept: **test suites**. Test suites are functions that test other functions.
 
 ```python
 def testIsPalindrome():
@@ -416,7 +416,7 @@ Speaking of tying loose ends, we need to come back to lists (_again, I know, but
 >>> lis = [0, 1, 2, 3, 4]
 ```
 
-1. ==Inserting:== Adding an item to a list at a specific location.
+1. **Inserting:** Adding an item to a list at a specific location.
 
 ```python
 >>> lis.insert(1, 'inserted')
@@ -424,14 +424,14 @@ Speaking of tying loose ends, we need to come back to lists (_again, I know, but
 [0, 'inserted', 1, 2, 3, 4]
 ```
 
-2. ==Count:== How many times an object appears in a list.
+2. **Count:** How many times an object appears in a list.
 
 ```python
 >>> lis.count(1)
 1
 ```
 
-3. ==Append:== Adds an item to the end of the list.
+3. **Append:** Adds an item to the end of the list.
 
 ```python
 >>> lis.append('appended')
@@ -439,7 +439,7 @@ Speaking of tying loose ends, we need to come back to lists (_again, I know, but
 [0, 'inserted', 1, 2, 3, 4, 'appended']
 ```
 
-4. ==Extend:== Adds a list to the end of another list.
+4. **Extend:** Adds a list to the end of another list.
 
 ```python
 >>> lis2 = ['extended1', 'extended2', 'extended3']
@@ -448,7 +448,7 @@ Speaking of tying loose ends, we need to come back to lists (_again, I know, but
 [0, 'inserted', 1, 2, 3, 4, 'appended', 'extended1', 'extended2', 'extended3']
 ```
 
-5. ==Pop:== Removes an element at an index, and also returns that element. ()
+5. **Pop:** Removes an element at an index, and also returns that element. ()
 
 ```python
 >>> lis.pop(0)
@@ -466,7 +466,7 @@ This will remove the last element if we use it without an attribute.
 [0, 'inserted', 1, 2, 3, 4, 'appended', 'extended1', 'extended2']
 ```
 
-6. ==Reverse:== Reverses a list.
+6. **Reverse:** Reverses a list.
 
 ```python
 >>> lis.reverse()
@@ -474,7 +474,7 @@ This will remove the last element if we use it without an attribute.
 ['extended2', 'extended1', 'appended', 4, 3, 2, 1, 'inserted']
 ```
 
-7. ==Sorting:== Sorts a list.
+7. **Sorting:** Sorts a list.
 
 The default sort for a list is ascending. 
 
@@ -582,7 +582,7 @@ Wait a second. What's wrong? Well, the problem occurs when we try to change a li
 | `1`   | `3`   | `[2, 3, 4]`      |
 | `2`   | `4`   | `[2, 3, 4]`      |
 
-So while the numbers shift, the indices stay the same, and this causes a mismatch between elements. How can we prevent this? We'll use ==list comprehension==.
+So while the numbers shift, the indices stay the same, and this causes a mismatch between elements. How can we prevent this? We'll use **list comprehension**.
 
 List comprehension offers a shorter syntax when we want to play with lists. For example to achieve what we tried with `removeDups(l1, l2)` we can just do:
 
