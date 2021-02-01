@@ -454,68 +454,68 @@ Speaking of tying loose ends, we need to come back to lists (_again, I know, but
 
 7. **Sorting:** Sorts a list.
 
-The default sort for a list is ascending. 
+	The default sort for a list is ascending. 
 
-```python
->>> numlist = [5, 6, 8, 10, 22, 9, 3, 1, 2]
->>> numlist.sort()
->>> numlist
-[1, 2, 3, 5, 6, 8, 9, 10, 22]
-```
+	```python
+	>>> numlist = [5, 6, 8, 10, 22, 9, 3, 1, 2]
+	>>> numlist.sort()
+	>>> numlist
+	[1, 2, 3, 5, 6, 8, 9, 10, 22]
+	```
 
-You can also sort lists of strings.
+	You can also sort lists of strings.
 
-```python
->>> strlist = ['a','d','c','b']
->>> strlist.sort()
->>> strlist
-['a', 'b', 'c', 'd']
-```
+	```python
+	>>> strlist = ['a','d','c','b']
+	>>> strlist.sort()
+	>>> strlist
+	['a', 'b', 'c', 'd']
+	```
 
-Or any type of predefined object for that matter[^1]. When sorting lists of lists, the interpreter looks at the average value of the lists.
+	Or any type of predefined object for that matter[^1]. When sorting lists of lists, the interpreter looks at the average value of the lists.
 
-```python
->>> listoflist = [[0, 1, 2, 3, 4], [5, 8]]
->>> listoflist.sort()
->>> listoflist
-[[0, 1, 2, 3, 4], [5, 8]]
-```
+	```python
+	>>> listoflist = [[0, 1, 2, 3, 4], [5, 8]]
+	>>> listoflist.sort()
+	>>> listoflist
+	[[0, 1, 2, 3, 4], [5, 8]]
+	```
 
-The one thing you cannot do is sorting a list with different types.
+	The one thing you cannot do is sorting a list with different types.
 
-```python
->>> lis = ['extended2', 'extended1', 'appended', 4, 3, 2, 1, 'inserted']
->>> lis.sort()
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-TypeError: '<' not supported between instances of 'int' and 'str'
-```
+	```python
+	>>> lis = ['extended2', 'extended1', 'appended', 4, 3, 2, 1, 'inserted']
+	>>> lis.sort()
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	TypeError: '<' not supported between instances of 'int' and 'str'
+	```
 
-We could get around this by using the `key` parameter. Whatever function we give to the `key` parameter is applied to all objects and the list is only sorted afterwards.
+	We could get around this by using the `key` parameter. Whatever function we give to the `key` parameter is applied to all objects and the list is only sorted afterwards.
 
-```python
->>> lis.sort(key=str)
->>> lis
-[1, 2, 3, 4, 'appended', 'extended1', 'extended2', 'inserted']
-```
+	```python
+	>>> lis.sort(key=str)
+	>>> lis
+	[1, 2, 3, 4, 'appended', 'extended1', 'extended2', 'inserted']
+	```
 
-You might be confused to see the first four elements as integers not strings. Wasn't the key supposed to be applied to all elements? Yes, it was, but that's only temporary. The key is applied to each element and the sort is done according to the results but the original elements are the ones being sorted. So even when you define a key, only the order of the elements change, not the elements themselves.
+	You might be confused to see the first four elements as integers not strings. Wasn't the key supposed to be applied to all elements? Yes, it was, but that's only temporary. The key is applied to each element and the sort is done according to the results but the original elements are the ones being sorted. So even when you define a key, only the order of the elements change, not the elements themselves.
 
-To turn the order of sort, you can define the parameter `reverse` as `True`.
+	To turn the order of sort, you can define the parameter `reverse` as `True`.
 
-```python
->>> lis.sort(key=str, reverse=True)
->>> lis
-['inserted', 'extended2', 'extended1', 'appended', 4, 3, 2, 1]
-```
+	```python
+	>>> lis.sort(key=str, reverse=True)
+	>>> lis
+	['inserted', 'extended2', 'extended1', 'appended', 4, 3, 2, 1]
+	```
 
-You can also use the function `sorted()` which returns a sorted version of the same function.
+	You can also use the function `sorted()` which returns a sorted version of the same function.
 
-```python
->>> numlist = [5, 6, 8, 10, 22, 9, 3, 1, 2]
->>> sorted(numlist)
-[1, 2, 3, 5, 6, 8, 9, 10, 22]
-```
+	```python
+	>>> numlist = [5, 6, 8, 10, 22, 9, 3, 1, 2]
+	>>> sorted(numlist)
+	[1, 2, 3, 5, 6, 8, 9, 10, 22]
+	```
 
 # List comprehension
 
