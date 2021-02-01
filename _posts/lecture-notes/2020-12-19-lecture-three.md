@@ -386,28 +386,6 @@ def testIsPalindrome():
 testIsPalindrome()
 ```
 
-# Modules
-
-```python
->>> import math
->>> math.pi
-3.141592653589793
->>> math.e
-2.718281828459045
->>> math.sqrt(2)
-1.4142135623730951
-```
-
-```python
->>> from math import *
->>> pi
-3.141592653589793
->>> sqrt(2)
-1.4142135623730951
->>> e
-2.718281828459045
-```
-
 # List methods
 
 Speaking of tying loose ends, we need to come back to lists (_again, I know, but for the last time I promise_)
@@ -545,9 +523,9 @@ Let's try making a function that checks if an element in list `l1` is also in li
 
 ```python
 def removeDups(l1, l2):
-	for e in l1:
-		if e in l2:
-			l1.remove(e)
+    for e in l1:
+        if e in l2:
+            l1.remove(e)
 ```
 
 Let's write a test suite and test our function.
