@@ -226,7 +226,7 @@ So we're just slowly shifting our pairs through the Fibonacci set here. I like t
 
 How might we write this with recursion? Simple. Actually it's simpler than the one without recursion. Let's remember what the Fibonacci function actually meant. 
 
-\\( F(N) = F(N-1)+F(N-2) )\\ where \\( F(0)=1 )\\ and \\( F(1)=1 )\\
+\\( F(N) = F(N-1)+F(N-2) \\) where \\( F(0)=1 \\) and \\( F(1)=1 \\)
 
 This seems like the exact recipe for a recursive function, doesn't it? Translating math into pseudo-code (code that doesn't run) we'd get:
 
@@ -630,7 +630,7 @@ Or if you don't like not seeing what you have clearly, you can just convert your
 [1, 2, 3, 4]
 ```
 
-That's it for `map()`. Now what does `lambda`  have to do with all these? `lambda` is used to create functions. Often thought of as anonymous function creator, it actually adds no functionality and is only a shorthand form of what we regularly do to define functions. So for example think about the function \\( f(x)=x^2 )\\. One way to define it might be
+That's it for `map()`. Now what does `lambda`  have to do with all these? `lambda` is used to create functions. Often thought of as anonymous function creator, it actually adds no functionality and is only a shorthand form of what we regularly do to define functions. So for example think about the function \\( f(x)=x^2 \\). One way to define it might be
 
 ```python
 >>> def c(x):
