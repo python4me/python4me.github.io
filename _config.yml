@@ -95,7 +95,7 @@ kramdown:
     span:
       line_numbers: false
     block:
-      line_numbers: false
+      line_numbers: true
       start_line: 1
 
 # DO NOT change this unless you're a Pro user on Jekyll and Web development,
