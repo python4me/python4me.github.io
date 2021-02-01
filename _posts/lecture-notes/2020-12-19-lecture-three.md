@@ -1,5 +1,5 @@
 ---
-title: Lecture Notes 2
+title: Lecture Notes 3
 author: Guess Who
 date: 2020-12-19 13:36:00 +0300
 categories: [Python, Lectures, Notes]
