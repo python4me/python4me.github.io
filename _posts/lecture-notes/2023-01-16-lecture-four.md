@@ -1,3 +1,11 @@
+---
+title: Lecture Notes 4
+author: Guess Who
+date: 2023-01-16 13:36:00 +0300
+categories: [Python, Lectures, Notes]
+tags: [lecture]
+math: true
+---
 
 A function, different to a mathematical one, is just a piece of code that only runs when it's called and returns a value if desired.
 
