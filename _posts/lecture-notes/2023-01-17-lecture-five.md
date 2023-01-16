@@ -1,3 +1,12 @@
+---
+title: Lecture Notes 5
+author: Guess Who
+date: 2023-01-17 13:36:00 +0300
+categories: [Python, Lectures, Notes]
+tags: [lecture]
+math: true
+---
+
 ```python
 # Raising forced exceptions
 x = 10
